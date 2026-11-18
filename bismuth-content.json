@@ -1,0 +1,281 @@
+{
+ "version": 1795040842,
+ "lessons": [
+  {
+   "id": "radial-menu",
+   "title": "Your Radial Menu",
+   "summary": "Open your tools right where you are drawing.",
+   "icon": "dial.medium",
+   "category": "Start Here",
+   "addedIn": 123,
+   "steps": [
+    {
+     "title": "Open the Radial Menu",
+     "text": "Tap the touch puck to open the radial menu. With Apple Pencil Pro, you can squeeze instead.",
+     "target": "tour.puck",
+     "callout": "Tap the Puck",
+     "done": "dial"
+    },
+    {
+     "title": "Everything Within Reach",
+     "text": "Drag the arcs to change size and other settings, or tap a tool in the centre. Tap the page when you are finished."
+    },
+    {
+     "title": "Make It Yours",
+     "text": "Preferences > Radial Menu lets you choose what it shows, how large it is and which tools stay on it.",
+     "target": "learn.preferences",
+     "callout": "Preferences"
+    }
+   ]
+  },
+  {
+   "id": "background",
+   "title": "Choose a Background",
+   "summary": "Keep the page plain or add a living background.",
+   "icon": "sparkles",
+   "category": "Start Here",
+   "addedIn": 125,
+   "steps": [
+    {
+     "title": "Plain by Default",
+     "text": "New installs start plain, so the app stays quick on every iPad. Open Preferences, then Background, to choose a living background.",
+     "target": "learn.preferences",
+     "callout": "Preferences"
+    }
+   ]
+  },
+  {
+   "id": "symmetry",
+   "title": "Draw in Symmetry",
+   "summary": "Turn one line into a balanced pattern.",
+   "icon": "circle.hexagongrid",
+   "category": "Drawing",
+   "addedIn": 0,
+   "steps": [
+    {
+     "title": "Choose Your Segments",
+     "text": "Rotate repeats each line around the centre. Use minus and plus to change how many copies you get.",
+     "target": "learn.symmetry",
+     "callout": "Rotate and Segments"
+    },
+    {
+     "title": "Add a Mirror",
+     "text": "Mirror reflects every line as well, for a perfectly balanced pattern.",
+     "target": "learn.mirror",
+     "callout": "Mirror"
+    },
+    {
+     "title": "Try It",
+     "text": "Draw one line on the page and watch every copy appear.",
+     "tool": "pen",
+     "draw": true,
+     "done": "draw"
+    }
+   ]
+  },
+  {
+   "id": "clean-joins",
+   "title": "Clean Joins",
+   "summary": "Tidy the small overshoot where lines meet.",
+   "icon": "arrow.triangle.merge",
+   "category": "Drawing",
+   "addedIn": 0,
+   "steps": [
+    {
+     "title": "Draw a Line",
+     "text": "Clean Joins is on for this lesson. Draw one line on the page.",
+     "tool": "pen",
+     "open": "cleanJoins",
+     "draw": true,
+     "done": "draw"
+    },
+    {
+     "title": "Cross It",
+     "text": "Draw another line that runs just past the first. The small overshoot is trimmed for you.",
+     "tool": "pen",
+     "draw": true,
+     "done": "draw"
+    },
+    {
+     "title": "Find the Switch",
+     "text": "Open the radial menu from the touch puck whenever you want to switch Clean Joins on or off.",
+     "target": "tour.puck",
+     "callout": "Touch Puck"
+    }
+   ]
+  },
+  {
+   "id": "trim",
+   "title": "Trim Loose Ends",
+   "summary": "Cut a line back to the nearest crossing.",
+   "icon": "scissors",
+   "category": "Drawing",
+   "addedIn": 0,
+   "steps": [
+    {
+     "title": "Make a Crossing",
+     "text": "Draw two lines that cross, leaving a loose end past the crossing.",
+     "tool": "pen",
+     "draw": true
+    },
+    {
+     "title": "Pick Trim",
+     "text": "Trim shares this button with the eraser. It is selected for you now.",
+     "target": "tour.trim",
+     "callout": "Trim",
+     "tool": "trim"
+    },
+    {
+     "title": "Cut It Back",
+     "text": "Scribble across the loose end. It cuts back to the nearest crossing.",
+     "tool": "trim",
+     "draw": true,
+     "done": "draw"
+    }
+   ]
+  },
+  {
+   "id": "clip-pattern",
+   "title": "Clip a Pattern to a Shape",
+   "summary": "Keep a pattern inside the shape below it.",
+   "icon": "square.on.circle",
+   "category": "Stencils",
+   "addedIn": 126,
+   "steps": [
+    {
+     "title": "Draw the Shape",
+     "text": "Draw a closed shape for your pattern to stay inside.",
+     "tool": "pen",
+     "draw": true,
+     "done": "draw"
+    },
+    {
+     "title": "Fill It",
+     "text": "Tap inside the shape to fill it. A clipped layer only shows where this layer has ink.",
+     "tool": "fill",
+     "draw": true,
+     "done": "draw"
+    },
+    {
+     "title": "Add a Layer",
+     "text": "Add a new layer for the pattern.",
+     "target": "learn.addLayer",
+     "callout": "New Layer",
+     "done": "layer"
+    },
+    {
+     "title": "Switch On Clip",
+     "text": "Tap Clip so this layer only shows where the layer below has ink.",
+     "target": "learn.clip",
+     "callout": "Clip",
+     "open": "layers",
+     "done": "clip"
+    },
+    {
+     "title": "Draw the Pattern",
+     "text": "Draw across the shape in the new colour. Anything outside it stays hidden.",
+     "tool": "pen",
+     "open": "contrastInk",
+     "draw": true,
+     "done": "draw"
+    },
+    {
+     "title": "Print What You See",
+     "text": "Print Stencil follows your clipped layers, so the stencil matches the page.",
+     "target": "tour.stencil",
+     "callout": "Print Stencil",
+     "open": "finish"
+    }
+   ]
+  },
+  {
+   "id": "mask-pattern",
+   "title": "Cut Out with a Mask",
+   "summary": "Show or hide part of the layer below.",
+   "icon": "circle.lefthalf.filled",
+   "category": "Stencils",
+   "addedIn": 126,
+   "steps": [
+    {
+     "title": "Draw the Pattern",
+     "text": "Draw the pattern you want to cut.",
+     "tool": "pen",
+     "draw": true,
+     "done": "draw"
+    },
+    {
+     "title": "Add a Layer",
+     "text": "Add a new layer for the mask.",
+     "target": "learn.addLayer",
+     "callout": "New Layer",
+     "done": "layer"
+    },
+    {
+     "title": "Choose the Mask",
+     "text": "Tap Mask to show the pattern inside your mask. Tap again to hide it there instead.",
+     "target": "learn.mask",
+     "callout": "Mask",
+     "open": "layers",
+     "done": "mask"
+    },
+    {
+     "title": "Draw the Mask",
+     "text": "Draw over the pattern. Only the parts under your mask stay visible, and the mask itself never prints.",
+     "tool": "pen",
+     "draw": true,
+     "done": "draw"
+    }
+   ]
+  },
+  {
+   "id": "print-stencil",
+   "title": "Print a Stencil",
+   "summary": "Size a design for skin and print it.",
+   "icon": "printer",
+   "category": "Stencils",
+   "addedIn": 126,
+   "steps": [
+    {
+     "title": "Open Print Stencil",
+     "text": "When your design is ready, Print Stencil prepares it for skin.",
+     "target": "tour.stencil",
+     "callout": "Print Stencil",
+     "open": "finish"
+    },
+    {
+     "title": "Set It Up",
+     "text": "Set the width on skin, switch on Mirror for Transfer if you need it, and check the preview before printing."
+    }
+   ]
+  },
+  {
+   "id": "feedback-mode",
+   "title": "Send Feedback as You Test",
+   "summary": "Mark up the screen and dictate notes.",
+   "icon": "text.bubble",
+   "category": "Testing",
+   "addedIn": 124,
+   "testers": true,
+   "steps": [
+    {
+     "title": "Start Feedback Mode",
+     "text": "Open the menu and choose Feedback Mode. A small bar stays on screen while you test.",
+     "target": "learn.menu",
+     "callout": "Menu"
+    },
+    {
+     "title": "Add a Note",
+     "text": "Tap Add Note, mark up the screenshot, cover anything private, then type or dictate what you noticed."
+    },
+    {
+     "title": "Send When Ready",
+     "text": "Review your notes and send them together. Claude reads them only if you switch that on."
+    }
+   ]
+  }
+ ],
+ "news": [],
+ "update": {
+  "build": 126
+ }
+}

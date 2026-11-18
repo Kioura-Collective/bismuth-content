@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bismuth Studio — Release notes</title>
+<style>
+:root{
+  --bg:#141416; --panel:#1f1f22; --raised:#2a2a2e; --line:rgba(255,255,255,.08);
+  --ink:#f2f2f4; --ink2:#9fa0aa; --accent:#8f6bff; --teal:#3fe0bc; --gold:#ffc65a;
+}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Text","Inter","Segoe UI",system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  background:
+    radial-gradient(900px 500px at 85% -10%, rgba(143,107,255,.18), transparent 60%),
+    radial-gradient(700px 420px at -10% 10%, rgba(63,224,188,.10), transparent 60%),
+    var(--bg);}
+.wrap{max-width:860px;margin:0 auto;padding:72px 28px 96px}
+header{display:flex;gap:22px;align-items:center;margin-bottom:18px}
+header svg{flex:none;filter:drop-shadow(0 8px 24px rgba(143,107,255,.35))}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2)}
+h1{margin:4px 0 0;font-size:44px;line-height:1.05;letter-spacing:-.02em;font-weight:700}
+.lede{color:var(--ink2);font-size:17px;max-width:620px;margin:18px 0 30px}
+.stats{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:56px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px;min-width:120px}
+.stat b{display:block;font-size:26px;letter-spacing:-.01em}
+.stat span{font-size:12px;color:var(--ink2);text-transform:uppercase;letter-spacing:.1em;font-weight:600}
+.stat.new b{color:var(--accent)} .stat.improved b{color:var(--teal)} .stat.fixed b{color:var(--gold)}
+.timeline{--rail:44px;--lx:9px;position:relative;padding-left:var(--rail)}
+.timeline:before{content:"";position:absolute;left:calc(var(--lx) - 1px);top:12px;bottom:40px;width:2px;
+  background:linear-gradient(var(--accent),rgba(255,255,255,.10) 28%)}
+.entry{position:relative;margin-bottom:30px}
+.when{position:relative;display:flex;gap:10px;align-items:center;height:24px;margin:0 0 10px 2px;font-size:12px}
+.dot{position:absolute;left:calc(var(--lx) - var(--rail) - 2px - 7px);top:5px;width:14px;height:14px;border-radius:50%;
+  box-sizing:border-box;background:var(--bg);border:2px solid var(--ink2)}
+.latest .dot{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 5px rgba(143,107,255,.22)}
+.builds{font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2)}
+.latest .builds{color:var(--accent)}
+.badge{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;border-radius:99px;background:rgba(143,107,255,.22);color:var(--ink)}
+.date{color:var(--ink2)}
+.release{background:var(--panel);border:1px solid var(--line);border-radius:18px}
+.latest .release{border-color:rgba(143,107,255,.45);box-shadow:0 20px 60px -30px rgba(143,107,255,.6)}
+summary{list-style:none;cursor:pointer;padding:20px 24px 20px;position:relative}
+summary::-webkit-details-marker{display:none}
+h3{margin:0 0 6px;font-size:22px;letter-spacing:-.01em}
+.latest h3{font-size:28px}
+.sum{margin:0;color:var(--ink2);max-width:640px}
+.tally{display:flex;gap:8px;align-items:center;margin-top:14px;flex-wrap:wrap}
+.t{font-size:12px;font-weight:600;padding:3px 10px;border-radius:99px;background:var(--raised)}
+.t.new{color:var(--accent)} .t.improved{color:var(--teal)} .t.fixed{color:var(--gold)}
+.chev{margin-left:auto;width:10px;height:10px;border-right:2px solid var(--ink2);border-bottom:2px solid var(--ink2);transform:rotate(45deg);transition:transform .2s}
+details[open] .chev{transform:rotate(-135deg)}
+.body{padding:0 24px 24px;display:grid;gap:14px}
+.kind{background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.kind h4{display:flex;align-items:center;gap:8px;margin:0 0 10px;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.kind h4 i{width:7px;height:7px;border-radius:50%;background:currentColor}
+.kind h4 em{font-style:normal;color:var(--ink2);font-weight:500}
+.kind.new h4{color:var(--accent)} .kind.improved h4{color:var(--teal)} .kind.fixed h4{color:var(--gold)}
+.kind ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.kind ul{gap:12px}
+.kind strong{display:block;font-size:14.5px}
+.kind li span{color:var(--ink2);font-size:14px}
+footer{margin-top:48px;color:var(--ink2);font-size:13px;text-align:center}
+@media (max-width:600px){h1{font-size:34px}.wrap{padding:44px 18px 72px}.timeline{--rail:30px;--lx:7px}.latest h3{font-size:23px}h3{font-size:19px}}
+@media print{body{background:#fff;color:#111}.entry{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <svg width="72" height="72" viewBox="0 0 72 72" aria-hidden="true">
+    <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff6fb1"/><stop offset=".35" stop-color="#ffc65a"/>
+      <stop offset=".65" stop-color="#3fe0bc"/><stop offset="1" stop-color="#8f6bff"/></linearGradient></defs>
+    <g fill="none" stroke="url(#g)" stroke-width="4" stroke-linejoin="round">
+      <path d="M8 8h56v56H8z"/><path d="M18 18h36v36H18z"/><path d="M28 28h16v16H28z"/>
+      <path d="M8 8l10 10M64 8L54 18M64 64L54 54M8 64l10-10" stroke-width="2.5"/>
+    </g>
+  </svg>
+  <div><div class="kicker">Bismuth Studio</div><h1>Release notes</h1></div>
+</header>
+<p class="lede">Bismuth Studio is a symmetry, sacred-geometry and tattoo design studio for iPad and Apple Pencil. Here is everything that has changed, with the newest release first.</p>
+<div class="stats">
+  <div class="stat"><b>126</b><span>Builds</span></div>
+  <div class="stat new"><b>87</b><span>New</span></div>
+  <div class="stat improved"><b>69</b><span>Improved</span></div>
+  <div class="stat fixed"><b>32</b><span>Fixed</span></div>
+</div>
+<div class="timeline">
+<div class="entry latest">
+  <div class="when"><span class="dot"></span><span class="builds">Build 126</span><span class="badge">Latest</span><span class="date">18 November 2026</span></div>
+  <details class="release" open>
+    <summary>
+      <h3>Stencils That Match the Page</h3>
+      <p class="sum">Print Stencil now follows your clipped layers and masks.</p>
+      <div class="tally"><span class="t new">0 new</span><span class="t improved">0 improved</span><span class="t fixed">1 fixed</span><span class="chev" aria-hidden="true"></span></div>
+    </summary>
+    <div class="body"><section class="kind fixed"><h4><i></i>Fixed<em>1</em></h4><ul><li><strong>Clipped and Masked Layers</strong><span>Print Stencil now prints only what shows on the page, and mask layers no longer print as ink.</span></li></ul></section></div>
+  </details>
+</div>
+<div class="entry">
+  <div class="when"><span class="dot"></span><span class="builds">Build 125</span><span class="date">18 November 2026</span></div>
+  <details class="release">
+    <summary>
+      <h3>Your Choice on AI</h3>
+      <p class="sum">You now decide each time whether Claude may read the feedback you send.</p>
+      <div class="tally"><span class="t new">1 new</span><span class="t improved">1 improved</span><span class="t fixed">0 fixed</span><span class="chev" aria-hidden="true"></span></div>
+    </summary>
+    <div class="body"><section class="kind new"><h4><i></i>New<em>1</em></h4><ul><li><strong>Let Claude Read This Feedback</strong><span>A switch on the send screen, off by default. Leave it off and your email is marked so Claude does not read it.</span></li></ul></section><section class="kind improved"><h4><i></i>Improved<em>1</em></h4><ul><li><strong>A Lighter First Launch</strong><span>New installs start with a plain background, so the app stays quick on older iPads until you choose one.</span></li></ul></section></div>
+  </details>
+</div>
+<div class="entry">
+  <div class="when"><span class="dot"></span><span class="builds">Build 124</span><span class="date">18 November 2026</span></div>
+  <details class="release">
+    <summary>
+      <h3>Feedback As You Test</h3>
+      <p class="sum">Testers can capture the screen, mark it up and write or dictate notes without leaving the app.</p>
+      <div class="tally"><span class="t new">1 new</span><span class="t improved">1 improved</span><span class="t fixed">0 fixed</span><span class="chev" aria-hidden="true"></span></div>
+    </summary>
+    <div class="body"><section class="kind new"><h4><i></i>New<em>1</em></h4><ul><li><strong>Feedback Mode</strong><span>Capture the screen, mark it up, cover anything private and add a note. Send all your notes together when you are done.</span></li></ul></section><section class="kind improved"><h4><i></i>Improved<em>1</em></h4><ul><li><strong>Private Logs</strong><span>The app&#x27;s log no longer records the names of your drawings.</span></li></ul></section></div>
+  </details>
+</div>
+<div class="entry">
+  <div class="when"><span class="dot"></span><span class="builds">Build 123</span><span class="date">18 November 2026</span></div>
+  <details class="release">
+    <summary>
+      <h3>A Tour That Sets Up Your Tools</h3>
+      <p class="sum">The guided tour now asks which Pencil you use and lets you make the radial menu your own.</p>
+      <div class="tally"><span class="t new">2 new</span><span class="t improved">1 improved</span><span class="t fixed">0 fixed</span><span class="chev" aria-hidden="true"></span></div>
+    </summary>
+    <div class="body"><section class="kind new"><h4><i></i>New<em>2</em></h4><ul><li><strong>Your Pencil</strong><span>The tour checks for squeeze and hover, then sets the app up for Apple Pencil Pro, another Apple Pencil or no Pencil.</span></li><li><strong>Your Radial Menu</strong><span>Choose what the radial menu shows, how large it is and which tools sit on it, with a live preview.</span></li></ul></section><section class="kind improved"><h4><i></i>Improved<em>1</em></h4><ul><li><strong>Opening the Radial Menu</strong><span>Without a squeeze, tapping the touch puck now opens the radial menu after setup.</span></li></ul></section></div>
+  </details>
+</div>
+<div class="entry">
+  <div class="when"><span class="dot"></span><span class="builds">Build 122</span><span class="date">18 November 2026</span></div>
+  <details class="release">
+    <summary>
+      <h3>Fits Every iPad, and a Tour You Can Retake</h3>
+      <p class="sum">The drawing screen now fits smaller iPads in portrait, the tour lets you choose your background, and your work is better protected while you draw.</p>
+      <div class="tally"><span class="t new">3 new</span><span class="t improved">2 improved</span><span class="t fixed">3 fixed</span><span class="chev" aria-hidden="true"></span></div>
+    </summary>
+    <div class="body"><section class="kind new"><h4><i></i>New<em>3</em></h4><ul><li><strong>Choose Your Background</strong><span>The guided tour now lets you pick a background or switch it off.</span></li><li><strong>Take the Tour Again</strong><span>Find the tour in the gallery, the … menu and Preferences &gt; About. It always opens on a fresh page.</span></li><li><strong>Drawing Backups</strong><span>Each drawing keeps a backup that opens if the drawing can no longer be read.</span></li></ul></section><section class="kind improved"><h4><i></i>Improved<em>2</em></h4><ul><li><strong>Autosave</strong><span>Your work now saves during long stretches of steady drawing, without waiting for a pause.</span></li><li><strong>VoiceOver</strong><span>Rail buttons, the touch puck and its buttons now have spoken names.</span></li></ul></section><section class="kind fixed"><h4><i></i>Fixed<em>3</em></h4><ul><li><strong>Smaller iPads in Portrait</strong><span>The top bar now fits on two rows, so the left toolbar stays at the edge and every button can be reached.</span></li><li><strong>Invalid Points</strong><span>A bad point in a stroke can no longer stop a drawing from saving.</span></li><li><strong>SVG and PDF Export</strong><span>The app now tells you when masks and clipping will be left out of the file.</span></li></ul></section></div>
+  </details>
+</div>
+<div class="entry">
+  <div class="when"><span class="dot"></span><span class="builds">Build 121</span><span class="date">18 November 2026</span></div>
+  <details class="release">
+    <summary>
+      <h3>Safer Saves and a Speed Report</h3>
+      <p class="sum">The app now tells you if a drawing could not be saved, and Send Feedback can include a report of how smoothly the app ran.</p>
+      <div class="tally"><span class="t new">1 new</span><span class="t improved">1 improved</span><span class="t fixed">2 fixed</span><span class="chev" aria-hidden="true"></span></div>
+    </summary>
+    <div class="body"><section class="kind new"><h4><i></i>New<em>1</em></h4><ul><li><strong>Speed Report</strong><span>With Crashes and Slowdowns or Everything Helpful chosen, the app measures how smoothly it runs. The report stays on your iPad and only goes with Send Feedback.</span></li></ul></section><section class="kind improved"><h4><i></i>Improved<em>1</em></h4><ul><li><strong>Clearer Labels</strong><span>Lattice settings and a few other labels now use consistent capitals.</span></li></ul></section><section class="kind fixed"><h4><i></i>Fixed<em>2</em></h4><ul><li><strong>Failed Saves</strong><span>If a drawing cannot be saved, the app now warns you and tries again.</span></li><li><strong>Touch Puck</strong><span>Open panels now sit on top of the puck, so it no longer covers their controls.</span></li></ul></section></div>
+  </details>
+</div>
+<div class="entry">
+  <div class="when"><span class="dot"></span><span class="builds">Build 120</span><span class="date">18 November 2026</span></div>
+  <details class="release">
+    <summary>
+      <h3>A Lighter, Faster Canvas</h3>
+      <p class="sum">The canvas now rests when nothing is happening and only redraws what changes, so long sessions stay smooth and the iPad stays cooler.</p>
+      <div class="tally"><span class="t new">0 new</span><span class="t improved">5 improved</span><span class="t fixed">0 fixed</span><span class="chev" aria-hidden="true"></span></div>
+    </summary>
+    <div class="body"><section class="kind improved"><h4><i></i>Improved<em>5</em></h4><ul><li><strong>Long Sessions</strong><span>The canvas rests when you pause and wakes the moment you touch it, and the app eases off when the iPad gets hot or Low Power Mode is on.</span></li><li><strong>Drawing Over Heavy Art</strong><span>A stroke in progress no longer redraws everything under it, so busy drawings and airbrush layers stay responsive.</span></li><li><strong>Airbrush</strong><span>Long airbrush strokes only work out their newest dabs as you go.</span></li><li><strong>Finishing a Stroke</strong><span>Layer thumbnails and autosave pictures are made in the background, so lifting the Pencil no longer waits for them.</span></li><li><strong>Opening Screens</strong><span>The animated background is prepared once, so the gallery and other screens open faster.</span></li></ul></section></div>
+  </details>
+</div>
+<div class="entry">
+  <div class="when"><span class="dot"></span><span class="builds">Build 119</span><span class="date">17 November 2026</span></div>
+  <details class="release">
+    <summary>
+      <h3>A Tour That Shows You</h3>
+      <p class="sum">The tour now points at each control and picks the tool for you to try.</p>
+      <div class="tally"><span class="t new">0 new</span><span class="t improved">1 improved</span><span class="t fixed">0 fixed</span><span class="chev" aria-hidden="true"></span></div>
+    </summary>
+    <div class="body"><section class="kind improved"><h4><i></i>Improved<em>1</em></h4><ul><li><strong>Tour</strong><span>Each step circles the control it talks about and selects the tool to try, for example Trim; at the end you are back on the pen.</span></li></ul></section></div>
+  </details>
+</div>
+<div class="entry">
+  <div class="when"><span class="dot"></span><span class="builds">Build 118</span><span class="date">17 November 2026</span></div>
+  <details class="release">
+    <summary>
+      <h3>Ready for the App Store</h3>
+      <p class="sum">Getting ready for release: a welcome and a short tour, experimental tools you choose to switch on, the one-time purchase, Send Feedback, crystal themes and backgrounds, radial menu settings, and a calmer, more consistent look.</p>
+      <div class="tally"><span class="t new">9 new</span><span class="t improved">9 improved</span><span class="t fixed">2 fixed</span><span class="chev" aria-hidden="true"></span></div>
+    </summary>
+    <div class="body"><section class="kind new"><h4><i></i>New<em>9</em></h4><ul><li><strong>Welcome and Tour</strong><span>A welcome screen and a short hands-on tour on first launch; each step ticks itself off as you do it.</span></li><li><strong>Experimental Tools</strong><span>Lattice, Live Trace, 3D Body Preview and Preview on a Photo are switched on or off in Preferences › Experimental, or on the last page of the tour.</span></li><li><strong>Bismuth Background</strong><span>Branching bismuth crystals grow, meet and fade. It is the new default; the stepped Hopper crystals are there too.</span></li><li><strong>Background Settings</strong><span>Size and Speed for every background, plus Branching or Steps and Density for the crystal ones, in Preferences › Background.</span></li><li><strong>Radial Menu Settings</strong><span>Choose the rings, arcs and tools the radial menu shows, its size and its opening animation, with a live preview.</span></li><li><strong>Bismuth Full</strong><span>One purchase unlocks everything, with no subscription; see your edition and restore a purchase in Preferences.</span></li><li><strong>Send Feedback</strong><span>Sends a note with the build and the app&#x27;s log, with or without a screenshot. Help Grow Bismuth sets what the app keeps to share.</span></li><li><strong>Crystal Themes</strong><span>Twelve themes named after crystals, with Bismuth as the default and Selenite as a light theme.</span></li><li><strong>Mirror for Transfer</strong><span>Print Stencil can mirror the design for transfer paper and turn it sideways on the page.</span></li></ul></section><section class="kind improved"><h4><i></i>Improved<em>9</em></h4><ul><li><strong>Swirl Background</strong><span>Redrawn from scratch, keeping its slow, painted look.</span></li><li><strong>One Switch Everywhere</strong><span>Every on and off switch is the same glass switch, matching the sliders.</span></li><li><strong>Selected Tool</strong><span>The highlight sits evenly in the rail&#x27;s rounded corner, follows the Corners setting and turns to glass with Liquid Glass.</span></li><li><strong>Gallery Bar</strong><span>Developer, What&#x27;s New and Folder are icon buttons with hover labels.</span></li><li><strong>Lattice</strong><span>Its own drawn icon, depth up to 10 (or 16 with Unlimited), and a haptic on every slider.</span></li><li><strong>Smoother Airbrush</strong><span>The finished picture is kept ready, so menus and sliders stay smooth over heavy shading, and dabs fade softly at the edge.</span></li><li><strong>Radial Menu</strong><span>Flow and Edge show as icons; holding a control grows it into its settings.</span></li><li><strong>Themes</strong><span>The hex field locks until tapped, with copy and paste buttons and a Done button.</span></li><li><strong>Corners</strong><span>More room from the screen corners in landscape.</span></li></ul></section><section class="kind fixed"><h4><i></i>Fixed<em>2</em></h4><ul><li><strong>Tour</strong><span>One tap could skip two cards of the tour; each tap now moves one card.</span></li><li><strong>Spiral Background</strong><span>Replaced with an original background.</span></li></ul></section></div>
+  </details>
+</div>
+<div class="entry">
+  <div class="when"><span class="dot"></span><span class="builds">Build 117</span><span class="date">17 November 2026</span></div>
+  <details class="release">
+    <summary>
+      <h3>Lighter airbrush, landscape that fits</h3>
+      <p class="sum">From the build 115 iPad test: the airbrush no longer slows the app, landscape fits the screen, the tools from the lower left move to the right, and Print Stencil, themes and Lattice are clearer.</p>
+      <div class="tally"><span class="t new">4 new</span><span class="t improved">9 improved</span><span class="t fixed">2 fixed</span><span class="chev" aria-hidden="true"></span></div>
+    </summary>
+    <div class="body"><section class="kind new"><h4><i></i>New<em>4</em></h4><ul><li><strong>Corner Points in Edit Curve</strong><span>Tap the centre of a point to make it a sharp corner; tap again to make it smooth.</span></li><li><strong>Several Custom Themes</strong><span>Make as many themes as you like, each with its own name, and rename or delete them.</span></li><li><strong>Tracing Image Eye</strong><span>An eye under the Tracing Image button hides and shows it in one tap; its panel has Hide and Show too.</span></li><li><strong>Lattice Zoom</strong><span>Pinch to zoom and drag to pan the Lattice preview; double-tap to fit it again.</span></li></ul></section><section class="kind improved"><h4><i></i>Improved<em>9</em></h4><ul><li><strong>Faster Airbrush</strong><span>Each airbrush dab is now one soft shape drawn by the graphics chip instead of six stacked discs, about fifty times fewer points, so layers of shading no longer slow the sliders or the background.</span></li><li><strong>Bigger Airbrush</strong><span>The airbrush goes up to 240 and keeps its own size, separate from the line tools.</span></li><li><strong>Radial Menu Follows the Airbrush</strong><span>With the airbrush in hand the dial&#x27;s lower arcs are Flow and Edge, and the rope and clean-up switches are left out.</span></li><li><strong>Airbrush and Zen Icons</strong><span>The airbrush has its own drawn icon, and Zen mode is a singing bowl instead of the ensō.</span></li><li><strong>Landscape</strong><span>The rails pack tighter on a shorter screen, so the top bar and every tool fit in landscape.</span></li><li><strong>Right-Hand Rail</strong><span>Text, Import, Live Trace, Print Stencil, the previews and Lattice move from the lower left rail to the right, under Tracing Image and Shape Builder.</span></li><li><strong>Print Stencil</strong><span>Starts at Fit to One Page, says the finished size and page count in plain words, folds every section, and previews sharp at small sizes.</span></li><li><strong>Theme Colours</strong><span>Themes and the custom accent use the app&#x27;s own colour picker, and Preferences shows a short row of themes with Show All.</span></li><li><strong>Lattice</strong><span>A quick preview while you change a setting and the full drawing a moment after; depth stops where the points would run away; switches match the rest of the app.</span></li></ul></section><section class="kind fixed"><h4><i></i>Fixed<em>2</em></h4><ul><li><strong>Airbrush Kept Soft</strong><span>Erasing part of, trimming, recolouring, copying or merging an airbrush stroke keeps its soft edge instead of turning it into a hard line.</span></li><li><strong>Curve Bar Icon</strong><span>The curve pen&#x27;s icon shows in the bar above the page again.</span></li></ul></section></div>
+  </details>
+</div>
+<div class="entry">
+  <div class="when"><span class="dot"></span><span class="builds">Build 116</span><span class="date">17 November 2026</span></div>
+  <details class="release">
+    <summary>
+      <h3>Lines that meet, and a quieter page</h3>
+      <p class="sum">Small gaps close, curves cross mirror lines smoothly, and Zen mode clears the screen down to the tools, the page and a three-button puck.</p>
+      <div class="tally"><span class="t new">4 new</span><span class="t improved">1 improved</span><span class="t fixed">3 fixed</span><span class="chev" aria-hidden="true"></span></div>
+    </summary>
+    <div class="body"><section class="kind new"><h4><i></i>New<em>4</em></h4><ul><li><strong>Close Small Gaps</strong><span>When a line ends just short of another line&#x27;s end, or of a line, it is drawn on to meet it, with the correction spread over its last few points. A switch in Preferences › Drawing.</span></li><li><strong>Smooth Across Mirror Lines</strong><span>When a stroke ends close to a mirror line, its last stretch bends to meet the line square on, so the mirrored copy carries on as one smooth curve instead of forming a valley. A switch in Preferences › Drawing.</span></li><li><strong>Zen Mode</strong><span>The ensō button beside Preferences hides the top bar, the lower rail, the layer strip and the arrange rail, and trims the puck to undo, redo and eraser. A small pill in the corner keeps undo, redo and the way back out. The app remembers it.</span></li><li><strong>Last Drawing widget</strong><span>A home-screen widget shows the drawing you last opened and opens it with a tap. It refreshes shortly after you switch drawings.</span></li></ul></section><section class="kind improved"><h4><i></i>Improved<em>1</em></h4><ul><li><strong>Smoother Across Mirror Lines</strong><span>The mirror line is now found from each reflection itself, so the bend works with any centre, tile or turn, and it is drawn finely so it reads as one curve rather than facets.</span></li></ul></section><section class="kind fixed"><h4><i></i>Fixed<em>3</em></h4><ul><li><strong>Eraser icon</strong><span>The eraser group in the tool rail showed an empty button; it shows the eraser again (the circle tool had the same fault).</span></li><li><strong>Lattice icon</strong><span>Lattice shared its icon with the Pattern Gallery; it has its own now.</span></li><li><strong>Flyouts behind sheets</strong><span>Opening Preferences, the menu or Export closes any open tool flyout instead of leaving it on screen behind.</span></li></ul></section></div>
+  </details>
+</div>
+<div class="entry">
+  <div class="when"><span class="dot"></span><span class="builds">Build 115</span><span class="date">17 November 2026</span></div>
+  <details class="release">
+    <summary>
+      <h3>Lattice, airbrush and a clearer print</h3>
+      <p class="sum">Lattice gets its own section of the gallery. The airbrush arrives, any line can be edited as a curve, Live Trace becomes a layer you can re-trace, Print Stencil shows a live preview, panels scroll properly, and you can build your own theme.</p>
+      <div class="tally"><span class="t new">5 new</span><span class="t improved">4 improved</span><span class="t fixed">3 fixed</span><span class="chev" aria-hidden="true"></span></div>
+    </summary>
+    <div class="body"><section class="kind new"><h4><i></i>New<em>5</em></h4><ul><li><strong>Airbrush</strong><span>A soft spray in the brush group. EDGE on the rail switches Soft, Medium and Hard; FLOW sets how much ink one pass lays down, and passes build up. It follows pressure, works in every symmetry copy, and exports with its soft edge.</span></li><li><strong>Live Trace layers</strong><span>Live Trace previews as you adjust and places the result with ✓ (✕ discards), on its own Live Trace layer that remembers its settings. Select that layer and open Live Trace again to re-trace it.</span></li><li><strong>Edit Curve</strong><span>Lasso a line and tap Edit Curve: it becomes curve-pen points with smooth handles at its bends, in its own colour, width and symmetry. Drag points and handles, then Done. This works for snapped arcs and S-curves too.</span></li><li><strong>Theme builder</strong><span>Under Appearance, Customise copies the current theme into your own Custom theme, with a colour picker for each of its eight colours.</span></li><li><strong>Lattices in the gallery</strong><span>A Drawings / Lattices switch in the gallery bar. Save a lattice and it appears there; tap it to open it again, or start a new one. Send to Canvas from the gallery starts an A4 drawing to receive it.</span></li></ul></section><section class="kind improved"><h4><i></i>Improved<em>4</em></h4><ul><li><strong>Print Stencil</strong><span>A live preview of the stencil, in purple or black, with the page seams marked. Size, ink and layers come first; Lines and Separation fold away with a one-line summary.</span></li><li><strong>Lattice</strong><span>Geometry Lab is renamed Lattice. It has a Save button, and its layers are named Lattice Lines and Lattice Points.</span></li><li><strong>Preferences</strong><span>At high roundness the glass and the content share one corner shape, the sidebar title lines up with the section title, and Corners is no longer cut off.</span></li><li><strong>Themes</strong><span>All fifteen themes show in a grid, with no sideways scrolling.</span></li></ul></section><section class="kind fixed"><h4><i></i>Fixed<em>3</em></h4><ul><li><strong>Scrolling in panels</strong><span>Preferences, Print Stencil, Layers and every other scrolling panel now scroll when you drag across their controls.</span></li><li><strong>Stencil page count</strong><span>Print Stencil opens at the largest size that fits one sheet, so an A4 drawing no longer prints across four pages. Larger sizes still tile.</span></li><li><strong>Bars touching the edges</strong><span>The animated background no longer widens the layout, and the top bar fits a 13-inch iPad in portrait, so the bars and rails keep their margins.</span></li></ul></section></div>
+  </details>
+</div>
+<div class="entry">
+  <div class="when"><span class="dot"></span><span class="builds">Build 114</span><span class="date">17 November 2026</span></div>
+  <details class="release">
+    <summary>
+      <h3>A studio of your own</h3>
+      <p class="sum">Themes and animated backgrounds make the app feel like yours. The gallery now shows your drawings as artwork, with stacks. The shape builder has the full Illustrator set, and snapping can follow a line you&#x27;ve already drawn.</p>
+      <div class="tally"><span class="t new">9 new</span><span class="t improved">10 improved</span><span class="t fixed">2 fixed</span><span class="chev" aria-hidden="true"></span></div>
+    </summary>
+    <div class="body"><section class="kind new"><h4><i></i>New<em>9</em></h4><ul><li><strong>Shape Builder</strong><span>The full Pathfinder set as icon buttons: Unite, Minus Front, Intersect, Exclude, Divide, Trim, Merge, Crop, Outline and Minus Back, plus Outline Stroke. Drawn lines are outlined automatically, so linework works as well as fills.</span></li><li><strong>Geometry Lab</strong><span>Recursive geometry built from numbers: points on a circle, each becoming the centre of a smaller copy, level after level, with lines, outlines, star and curve edges, and point circles. It starts simple, previews in your pen colour on paper, and Send to Canvas places it as vector strokes on new layers. On the second rail.</span></li><li><strong>Shape tools in the selection bar</strong><span>When two or more shapes or lines are selected, the shape modes and pathfinders appear right in the selection bar.</span></li><li><strong>Themes</strong><span>Fifteen editor-style themes, including Mirage, Midnight, Tokyo Night, Dracula, Nord, Catppuccin and Gruvbox. Each sets the panels, lettering, accent and background colours.</span></li><li><strong>Animated backgrounds</strong><span>Twelve looping styles from Mirage Core, including Julia, Mandelbrot and Burning Ship fractals, Aurora, Kaleidoscope and Evolving. They run in the gallery and around the page.</span></li><li><strong>Stacks</strong><span>Drag one drawing onto another to stack them, or use the Stack menu. Open a stack to see what&#x27;s in it.</span></li><li><strong>Follow snapping</strong><span>Hold at the end of a stroke drawn beside another line, and it becomes that line&#x27;s exact parallel at an even gap.</span></li><li><strong>Arc and curve snapping</strong><span>Holding now snaps a curved stroke to a clean circular arc, or to one smooth curve that handles both C and S shapes.</span></li><li><strong>Lasso on every layer</strong><span>An option in Preferences takes strokes from every visible layer at once.</span></li></ul></section><section class="kind improved"><h4><i></i>Improved<em>10</em></h4><ul><li><strong>Top bar</strong><span>Each control now opens its own panel, right under it. Rotate, the segment count, Mirror and the centre form one Symmetry group with its own options. Repeat, Tile, Grid (new in the bar) and Fade each have theirs. The pattern button opens just the gallery. Panels are roomier.</span></li><li><strong>Gallery</strong><span>Drawings appear as sheets of paper with soft shadows, on the animated background, under a glass bar that matches the drawing&#x27;s top bar.</span></li><li><strong>Preferences</strong><span>Settings are grouped into six sections in a sidebar: Pencil &amp; Touch, Drawing, Appearance, Background, Haptics and About.</span></li><li><strong>New drawings</strong><span>A Portrait or Landscape switch, drawings appear in the gallery straight away, and the page opens centred clear of the bars.</span></li><li><strong>Lasso</strong><span>If nothing on the active layer is caught, the lasso selects on the layer with the most inside it and switches to that layer.</span></li><li><strong>What&#x27;s New</strong><span>A fractal header, and a gently pulsing dot on the current build.</span></li><li><strong>Corner Roundness</strong><span>A Preferences slider for how round panels and bars are.</span></li><li><strong>Labels</strong><span>Buttons, menus, settings and titles now use Title Case throughout.</span></li><li><strong>Panels</strong><span>The grab bar is finer and has more room above it, panel buttons have more contrast, and the pin sits centred in its circle.</span></li><li><strong>Curve pen</strong><span>Available as a shortcut dot around the radial menu.</span></li></ul></section><section class="kind fixed"><h4><i></i>Fixed<em>2</em></h4><ul><li><strong>Page under the top bar</strong><span>A page fitted to the screen no longer touches the top bar or runs under the rails.</span></li><li><strong>Empty drawings</strong><span>A new drawing shows in the gallery even before anything is drawn on it.</span></li></ul></section></div>
+  </details>
+</div>
+<div class="entry">
+  <div class="when"><span class="dot"></span><span class="builds">Build 113</span><span class="date">17 November 2026</span></div>
+  <details class="release">
+    <summary>
+      <h3>Preview first, then place</h3>
+      <p class="sum">Constructions are previewed before they are placed, and there is a Move tool on the rail. Sliders and panels are lighter, accent colours can be fully customised, and two fill problems are fixed.</p>
+      <div class="tally"><span class="t new">5 new</span><span class="t improved">6 improved</span><span class="t fixed">2 fixed</span><span class="chev" aria-hidden="true"></span></div>
+    </summary>
+    <div class="body"><section class="kind new"><h4><i></i>New<em>5</em></h4><ul><li><strong>What&#x27;s New</strong><span>This timeline. Open it from the gallery, the menu or Preferences; it also appears once after each update.</span></li><li><strong>Move tool</strong><span>A Move button on the left rail puts the active layer in the transform box. On the radial menu, the Move dot replaces the Trim dot.</span></li><li><strong>Custom accent colour</strong><span>A colour picker sits beside the seven preset accents in Preferences.</span></li><li><strong>Accent on guides and selection</strong><span>Guides, mirror lines, the rope, the lasso and the transform box take the accent colour. A switch in Preferences keeps them separate.</span></li><li><strong>Panel grabber</strong><span>Every rail panel has a grab bar across its top. Drag it to move the panel anywhere.</span></li></ul></section><section class="kind improved"><h4><i></i>Improved<em>6</em></h4><ul><li><strong>Constructions</strong><span>A construction previews live in your pen colour while you adjust Size, Count and Turn. Nothing is placed until you tap the check mark; the ✕ discards it.</span></li><li><strong>Ink</strong><span>The fountain pen is now Ink, with an ink-bottle icon. Barrel roll is smoothed point by point, so the nib turns fluidly instead of in steps.</span></li><li><strong>Curve pen</strong><span>The curve pen has a pen-nib icon and is now the last tool in the brush group.</span></li><li><strong>Glass sliders</strong><span>Sliders are clear at rest and fill with the accent colour while you drag them, across every panel.</span></li><li><strong>Selection bar</strong><span>The buttons are clearer. Recolour opens the colour panel and recolours the selection live as you pick.</span></li><li><strong>Rails</strong><span>The left, right and finishing rails are all the same width.</span></li></ul></section><section class="kind fixed"><h4><i></i>Fixed<em>2</em></h4><ul><li><strong>Refilling a filled area</strong><span>Tapping a fill with a new colour recolours it. Before, it removed the fill, so the area looked white.</span></li><li><strong>Fill flooding the page</strong><span>Fill could cover the whole page after edits elsewhere. Region detection now notices every change, and you&#x27;re warned before filling anything that covers almost the whole page.</span></li></ul></section></div>
+  </details>
+</div>
+<div class="entry">
+  <div class="when"><span class="dot"></span><span class="builds">Builds 101–112</span><span class="date">November 2026</span></div>
+  <details class="release">
+    <summary>
+      <h3>After TestFlight</h3>
+      <p class="sum">This round added Illustrator-style curves, previewing a design on a client photo, and panels you can move, with readable Liquid Glass throughout.</p>
+      <div class="tally"><span class="t new">8 new</span><span class="t improved">5 improved</span><span class="t fixed">3 fixed</span><span class="chev" aria-hidden="true"></span></div>
+    </summary>
+    <div class="body"><section class="kind new"><h4><i></i>New<em>8</em></h4><ul><li><strong>Curve pen</strong><span>Tap to place corner points, or drag to pull curve handles. Adjust any point afterwards, then close the shape or finish it with Done.</span></li><li><strong>Preview on a photo</strong><span>Lay the design over a photo of the client, drag its corners to fit it to the limb, and blend it as ink on skin.</span></li><li><strong>Lift the last stroke</strong><span>One tap moves the line you just drew onto its own layer. Tap again to bring the line before it too.</span></li><li><strong>Movable panels</strong><span>Rail panels can be dragged anywhere and stay where you put them.</span></li><li><strong>Accent colours</strong><span>Choose from seven accent colours in Preferences.</span></li><li><strong>Barrel roll</strong><span>On Apple Pencil Pro, rolling the barrel turns the broad nib as you draw.</span></li><li><strong>Clip and Mask buttons</strong><span>The layers panel has one-tap Clip and Mask buttons for the selected layer.</span></li><li><strong>Tap the puck for the radial menu</strong><span>An option in Preferences for a Pencil without squeeze, or for drawing with a finger or a mouse.</span></li></ul></section><section class="kind improved"><h4><i></i>Improved<em>5</em></h4><ul><li><strong>Liquid Glass</strong><span>Panels are tinted so text stays readable over a white page, with a Glass tint slider. The glass now extends to the touch puck and the radial menu.</span></li><li><strong>Constructions</strong><span>Live preview, a Turn slider, Count up to 24, and an option to place each construction on its own named layer.</span></li><li><strong>Transform box</strong><span>The turn handle stays reachable near the top of the screen, and the bar no longer runs under the layers panel.</span></li><li><strong>Drawing on a hidden layer</strong><span>Shows a short notice, and you feel a knock in the Pencil.</span></li><li><strong>Panels</strong><span>More padding inside panels. Shape builder buttons have icons.</span></li></ul></section><section class="kind fixed"><h4><i></i>Fixed<em>3</em></h4><ul><li><strong>Full-screen launch in Swift Playgrounds</strong><span>The Playgrounds copy no longer carries the Xcode development team, which stopped it launching full screen.</span></li><li><strong>Constructions panel</strong><span>It no longer slides under the top bar.</span></li><li><strong>Panel pointer</strong><span>A moved panel no longer leaves its pointer arrow behind.</span></li></ul></section></div>
+  </details>
+</div>
+<div class="entry">
+  <div class="when"><span class="dot"></span><span class="builds">Builds 87–100</span><span class="date">November 2026</span></div>
+  <details class="release">
+    <summary>
+      <h3>Ready for TestFlight</h3>
+      <p class="sum">This round brought colour tracing, layer masks and painting directly on the 3D body, ending in the first TestFlight release.</p>
+      <div class="tally"><span class="t new">8 new</span><span class="t improved">3 improved</span><span class="t fixed">1 fixed</span><span class="chev" aria-hidden="true"></span></div>
+    </summary>
+    <div class="body"><section class="kind new"><h4><i></i>New<em>8</em></h4><ul><li><strong>Colour live trace</strong><span>Turns a photo into stacked colour shapes, from black and white up to 12 colours, and can leave the lightest colour as paper.</span></li><li><strong>Layer masks</strong><span>Show a layer only inside another layer, or hide it there. Masks work with clipping and in exports.</span></li><li><strong>Paint on the body</strong><span>Draw directly onto the 3D body in five inks, from 2 to 30 mm.</span></li><li><strong>Wrap onto the skin</strong><span>A design wraps around an arm or over a shoulder from the spot you tap, instead of being projected flat.</span></li><li><strong>Even steps</strong><span>An option in Repeat that moves each repeat in by the same distance.</span></li><li><strong>Centre snapping</strong><span>A layer you move snaps to the page centre and the guide centre.</span></li><li><strong>Diagnostics</strong><span>A running log you can copy, a note after an unexpected close, and the build number in Preferences.</span></li><li><strong>App icon and TestFlight</strong><span>The Bismuth crystal is the app icon. Bismuth Studio now installs through TestFlight.</span></li></ul></section><section class="kind improved"><h4><i></i>Improved<em>3</em></h4><ul><li><strong>Tracing image</strong><span>Drag it on the page, lock its position, or send it back to the centre.</span></li><li><strong>Touch puck</strong><span>Its buttons stay out. A tap no longer opens the radial menu; holding the puck still erases.</span></li><li><strong>3D preview</strong><span>Dragging, sizing and turning respond faster.</span></li></ul></section><section class="kind fixed"><h4><i></i>Fixed<em>1</em></h4><ul><li><strong>Black screen on launch</strong><span>Builds 87 to 94 didn&#x27;t compile because of the live-trace code. It was rewritten, and every build is now checked in Xcode before delivery.</span></li></ul></section></div>
+  </details>
+</div>
+<div class="entry">
+  <div class="when"><span class="dot"></span><span class="builds">Builds 60–86</span><span class="date">November 2026</span></div>
+  <details class="release">
+    <summary>
+      <h3>Tools for the studio</h3>
+      <p class="sum">Trimming, text, live trace, clipping and the transform box arrived, along with the staged radial menu and the touch puck.</p>
+      <div class="tally"><span class="t new">12 new</span><span class="t improved">6 improved</span><span class="t fixed">4 fixed</span><span class="chev" aria-hidden="true"></span></div>
+    </summary>
+    <div class="body"><section class="kind new"><h4><i></i>New<em>12</em></h4><ul><li><strong>Trim tool</strong><span>Scribble across a piece of a line to remove it back to the nearest crossings, in every symmetry copy.</span></li><li><strong>Text</strong><span>Twelve typefaces, filled or outlined, placed as vector shapes on their own layer.</span></li><li><strong>Drawings folder</strong><span>Keep your drawings, motifs and preferences in a folder such as iCloud Drive, so they carry over between builds.</span></li><li><strong>SVG import</strong><span>Paths, shapes, fills and colours come in as editable vector shapes.</span></li><li><strong>Live trace</strong><span>Turns the tracing image into editable fills or outlines, with a live preview.</span></li><li><strong>Clipping layers</strong><span>A layer shows only where the layer beneath it has ink.</span></li><li><strong>Transform box</strong><span>Move, resize, stretch and turn a layer directly on the canvas, with an optional proportion lock.</span></li><li><strong>Liner and pressure brushes</strong><span>The Liner keeps an even width. The tapered fineliner always responds to pressure.</span></li><li><strong>Motif hover ghost</strong><span>A preview of the motif follows the hovering Pencil and turns with barrel roll.</span></li><li><strong>Built-in bodies</strong><span>Male and female 3D bodies made from MakeHuman (CC0).</span></li><li><strong>Second rail</strong><span>Text, Import, Stencil and the 3D body are on a fold-out rail.</span></li><li><strong>Shortcut dots</strong><span>Fifteen customisable dots around the radial menu.</span></li></ul></section><section class="kind improved"><h4><i></i>Improved<em>6</em></h4><ul><li><strong>Radial menu</strong><span>It opens in stages from the centre with a small bounce, quickly and smoothly.</span></li><li><strong>Touch puck</strong><span>On by default, with undo, redo, eraser, trim and a context button.</span></li><li><strong>Gradient brush</strong><span>A colour panel with a preview, Swap and Fade to clear.</span></li><li><strong>Haptics</strong><span>A soft tick while you drag sliders and dial arcs.</span></li><li><strong>Preferences</strong><span>Saved in your drawings folder, so they move to a new build with you.</span></li><li><strong>Defaults</strong><span>The rope stabilizer starts on at 50%, and the radial menu centre shows the five main brushes.</span></li></ul></section><section class="kind fixed"><h4><i></i>Fixed<em>4</em></h4><ul><li><strong>Trim during lift</strong><span>A trim made as the Pencil lifted was being dropped.</span></li><li><strong>Small closed shapes</strong><span>Filling inside a closed shape no longer floods the area around it.</span></li><li><strong>Trim accuracy</strong><span>The scribble follows the Pencil exactly, and T-junctions count as cut points.</span></li><li><strong>Trim crashes</strong><span>Guards against degenerate crossings.</span></li></ul></section></div>
+  </details>
+</div>
+<div class="entry">
+  <div class="when"><span class="dot"></span><span class="builds">Builds 1–59</span><span class="date">November 2026</span></div>
+  <details class="release">
+    <summary>
+      <h3>Foundations</h3>
+      <p class="sum">The symmetry engine and the core studio: brushes, guides, layers, fills, stencils, motifs and the 3D body preview.</p>
+      <div class="tally"><span class="t new">15 new</span><span class="t improved">4 improved</span><span class="t fixed">4 fixed</span><span class="chev" aria-hidden="true"></span></div>
+    </summary>
+    <div class="body"><section class="kind new"><h4><i></i>New<em>15</em></h4><ul><li><strong>Symmetry engine</strong><span>Mirror, rotate, repeat and tile, with a pattern gallery of 15 presets and an adjustable centre and angle.</span></li><li><strong>Gallery and autosave</strong><span>Drawings with thumbnails, custom page sizes, rename, duplicate and delete.</span></li><li><strong>Brushes</strong><span>Pen, fineliner, mechanical pencil, fountain pen, gradient brush, stipple, dots, lines and circles.</span></li><li><strong>Stabilizers</strong><span>Smoothing and rope, separately or together.</span></li><li><strong>Clean joins</strong><span>Overshoots where a stroke meets its own symmetry copies are trimmed so the lines meet cleanly.</span></li><li><strong>Fill and shape builder</strong><span>Vector region fills, dotwork fills, gap tolerance, and Unite and Subtract.</span></li><li><strong>Stencils</strong><span>Print at the exact finished size, with tiled pages, separation into linework, solids and shading, and thermal-printer images.</span></li><li><strong>Motifs</strong><span>Capture a layer as a stamp and place it anywhere in the pattern, from a saved library.</span></li><li><strong>Constructions</strong><span>The Flower of Life, Metatron&#x27;s Cube, polygons, stars, a golden spiral and more.</span></li><li><strong>Layers</strong><span>Groups, reordering, swipe actions, and transforming a single layer or a whole group.</span></li><li><strong>3D body preview</strong><span>Orbit a body and drape the design onto it.</span></li><li><strong>Lasso selection</strong><span>Select through symmetry copies, then move, recolour, duplicate or delete.</span></li><li><strong>Export</strong><span>PNG, JPEG, SVG and PDF.</span></li><li><strong>Colour</strong><span>A custom picker, tattoo palettes, an eyedropper and recent colours.</span></li><li><strong>Import and tracing</strong><span>A floating reference window and a see-through tracing image.</span></li></ul></section><section class="kind improved"><h4><i></i>Improved<em>4</em></h4><ul><li><strong>Radial dial</strong><span>Three rings: tools, toggles and sliders.</span></li><li><strong>Hold to snap</strong><span>Recognises lines, circles, ellipses, triangles and rectangles.</span></li><li><strong>Haptics</strong><span>Distinct pulses for tap, snap, hold, done and undo, with a strength setting.</span></li><li><strong>Preferences and menus</strong><span>Redrawn in the app&#x27;s own style.</span></li></ul></section><section class="kind fixed"><h4><i></i>Fixed<em>4</em></h4><ul><li><strong>Saving stall</strong><span>Saving moved off the main thread, removing a pause after each stroke.</span></li><li><strong>Gaps inside fills</strong><span>Thin horizontal gaps were repaired; older drawings are fixed when you open them.</span></li><li><strong>Panels not appearing</strong><span>The left-rail panels were rebuilt so they attach to their buttons.</span></li><li><strong>Pinch and undo</strong><span>A pinch no longer triggers undo.</span></li></ul></section></div>
+  </details>
+</div>
+</div>
+<footer>Built from the same notes as What's New in the app.</footer>
+</div>
+</body>
+</html>
