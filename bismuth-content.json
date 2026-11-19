@@ -1,5 +1,5 @@
 {
- "version": 1795050984,
+ "version": 1795067757,
  "lessons": [
   {
    "id": "radial-menu",
@@ -362,7 +362,7 @@
     },
     {
      "title": "Add a Note",
-     "text": "Tap Add Note, mark up the screenshot, cover anything private, then type or dictate what you noticed. Words are optional. Tap a saved note to change it later."
+     "text": "Tap Add Note and mark up the screenshot. Your artwork is hidden unless you choose to include it. Words are optional, and you can tap a saved note to change it later."
     },
     {
      "title": "Send When Ready",
