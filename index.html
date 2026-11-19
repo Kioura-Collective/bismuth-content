@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bismuth Studio — Release notes</title>
+<link rel="icon" href="bismuth-icon.png">
+<link rel="apple-touch-icon" href="bismuth-icon.png">
 <style>
 :root{
   --bg:#141416; --panel:#1f1f22; --raised:#2a2a2e; --line:rgba(255,255,255,.08);
@@ -19,7 +21,7 @@ body{margin:0;color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"
     var(--bg);}
 .wrap{max-width:860px;margin:0 auto;padding:72px 28px 96px}
 header{display:flex;gap:22px;align-items:center;margin-bottom:18px}
-header svg{flex:none;filter:drop-shadow(0 8px 24px rgba(143,107,255,.35))}
+header img{flex:none;width:72px;height:72px;border-radius:16px;filter:drop-shadow(0 8px 24px rgba(143,107,255,.35))}
 .kicker{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2)}
 h1{margin:4px 0 0;font-size:44px;line-height:1.05;letter-spacing:-.02em;font-weight:700}
 .lede{color:var(--ink2);font-size:17px;max-width:620px;margin:18px 0 30px}
@@ -70,15 +72,7 @@ footer{margin-top:48px;color:var(--ink2);font-size:13px;text-align:center}
 <body>
 <div class="wrap">
 <header>
-  <svg width="72" height="72" viewBox="0 0 72 72" aria-hidden="true">
-    <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#ff6fb1"/><stop offset=".35" stop-color="#ffc65a"/>
-      <stop offset=".65" stop-color="#3fe0bc"/><stop offset="1" stop-color="#8f6bff"/></linearGradient></defs>
-    <g fill="none" stroke="url(#g)" stroke-width="4" stroke-linejoin="round">
-      <path d="M8 8h56v56H8z"/><path d="M18 18h36v36H18z"/><path d="M28 28h16v16H28z"/>
-      <path d="M8 8l10 10M64 8L54 18M64 64L54 54M8 64l10-10" stroke-width="2.5"/>
-    </g>
-  </svg>
+  <img src="bismuth-icon.png" width="72" height="72" alt="">
   <div><div class="kicker">Bismuth Studio</div><h1>Release notes</h1></div>
 </header>
 <p class="lede">Bismuth Studio is a symmetry, sacred-geometry and tattoo design studio for iPad and Apple Pencil. Here is everything that has changed, with the newest release first.</p>
