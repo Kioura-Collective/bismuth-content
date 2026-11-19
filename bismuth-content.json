@@ -1,5 +1,5 @@
 {
- "version": 1795049092,
+ "version": 1795050984,
  "lessons": [
   {
    "id": "radial-menu",
@@ -28,7 +28,7 @@
      "opened": "Radial Menu in this list sets what it shows, how large it is and which tools stay on it. Finish closes Preferences."
     }
    ],
-   "revision": 128
+   "revision": 130
   },
   {
    "id": "background",
@@ -46,7 +46,31 @@
      "opened": "Choose Background in this list to pick a living background. Finish closes Preferences."
     }
    ],
-   "revision": 128
+   "revision": 130
+  },
+  {
+   "id": "widgets",
+   "title": "Add Bismuth Widgets",
+   "summary": "Keep your drawings and a daily idea on your Home Screen.",
+   "icon": "square.grid.2x2",
+   "category": "Start Here",
+   "addedIn": 130,
+   "minBuild": 130,
+   "steps": [
+    {
+     "title": "Add a Widget",
+     "text": "On your Home Screen, hold an empty spot, tap Edit, then Add Widget, and choose Bismuth Studio."
+    },
+    {
+     "title": "Pick What Helps",
+     "text": "Recent Drawings reopens your work. Quick Start begins a new drawing. Daily Pattern offers a new symmetry idea each day."
+    },
+    {
+     "title": "Private on the Lock Screen",
+     "text": "Drawing names and pictures on Recent Drawings are hidden while your iPad is locked."
+    }
+   ],
+   "revision": 130
   },
   {
    "id": "symmetry",
@@ -76,7 +100,7 @@
      "done": "draw"
     }
    ],
-   "revision": 128
+   "revision": 130
   },
   {
    "id": "clean-joins",
@@ -108,7 +132,7 @@
      "callout": "Touch Puck"
     }
    ],
-   "revision": 128
+   "revision": 130
   },
   {
    "id": "trim",
@@ -139,7 +163,7 @@
      "done": "draw"
     }
    ],
-   "revision": 128
+   "revision": 130
   },
   {
    "id": "steady-lines",
@@ -168,7 +192,7 @@
      "done": "draw"
     }
    ],
-   "revision": 128
+   "revision": 130
   },
   {
    "id": "fill-gaps",
@@ -199,7 +223,7 @@
      "draw": true
     }
    ],
-   "revision": 128
+   "revision": 130
   },
   {
    "id": "clip-pattern",
@@ -255,7 +279,7 @@
      "opened": "The preview shows only what the clip keeps. Dotted lines are one of the line styles you can print. Finish closes this panel."
     }
    ],
-   "revision": 128
+   "revision": 130
   },
   {
    "id": "mask-pattern",
@@ -295,7 +319,7 @@
      "done": "draw"
     }
    ],
-   "revision": 128
+   "revision": 130
   },
   {
    "id": "print-stencil",
@@ -318,7 +342,7 @@
      "text": "Set the width on skin, switch on Mirror for Transfer if you need it, and check the preview before printing."
     }
    ],
-   "revision": 128
+   "revision": 130
   },
   {
    "id": "feedback-mode",
@@ -345,11 +369,11 @@
      "text": "Review your notes and send them together. Claude reads them only if you switch that on."
     }
    ],
-   "revision": 128
+   "revision": 130
   }
  ],
  "news": [],
  "update": {
-  "build": 128
+  "build": 130
  }
 }

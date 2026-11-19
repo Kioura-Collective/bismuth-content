@@ -1,5 +1,27 @@
 [
   {
+    "title": "Widgets",
+    "builds": "Build 130",
+    "date": "18 November 2026",
+    "summary": "Your drawings and a daily idea, right on your Home Screen.",
+    "new": [
+      [
+        "Recent Drawings Widget",
+        "Jump back into the drawings you worked on last."
+      ],
+      [
+        "Quick Start Widget",
+        "Start a new drawing, continue your last one, or open a lesson. It also fits the Lock Screen."
+      ],
+      [
+        "Daily Pattern Widget",
+        "A new symmetry idea each day. Tap to start drawing it."
+      ]
+    ],
+    "improved": [],
+    "fixed": []
+  },
+  {
     "title": "Your iPad Review, Fixed",
     "builds": "Build 128",
     "date": "18 November 2026",
