@@ -1,5 +1,5 @@
 {
- "version": 1795068534,
+ "version": 1795069232,
  "lessons": [
   {
    "id": "radial-menu",
@@ -375,5 +375,70 @@
  "news": [],
  "update": {
   "build": 130
- }
+ },
+ "knownIssues": [
+  {
+   "id": "pen-undo",
+   "title": "Undo With the Pen Tools",
+   "detail": "Undo can behave unexpectedly after drawing with the pen tools.",
+   "workaround": "",
+   "since": 130,
+   "state": "open",
+   "fixedIn": null
+  },
+  {
+   "id": "feedback-artwork",
+   "title": "Feedback Screenshots Can Show Your Artwork",
+   "detail": "Screenshots taken in Feedback Mode show whatever is on screen, including your artwork.",
+   "workaround": "Use Cover to hide anything private before saving a note. A coming update hides artwork automatically.",
+   "since": 124,
+   "state": "open",
+   "fixedIn": null
+  },
+  {
+   "id": "vector-masks",
+   "title": "SVG and PDF Export Ignore Masks and Clipping",
+   "detail": "Masked or clipped layers export as if the mask or clip were not there. The app warns you when this applies.",
+   "workaround": "Export a PNG, or use Print Stencil, which follows masks and clipping.",
+   "since": 121,
+   "state": "open",
+   "fixedIn": null
+  },
+  {
+   "id": "stencil-masks",
+   "title": "Masks Can Look Confusing in Print Stencil",
+   "detail": "Masks can show unexpected marks in the Print Stencil preview. A full review of masks is planned.",
+   "workaround": "Clipping works as expected and can often be used instead.",
+   "since": 126,
+   "state": "open",
+   "fixedIn": null
+  },
+  {
+   "id": "eraser-ends",
+   "title": "The Eraser Leaves Rounded Ends",
+   "detail": "Erasing part of a line leaves rounded ends instead of a clean cut.",
+   "workaround": "Trim cuts lines back to a crossing with clean ends.",
+   "since": 117,
+   "state": "open",
+   "fixedIn": null
+  },
+  {
+   "id": "live-trace-gaps",
+   "title": "Live Trace Can Miss Parts of a Picture",
+   "detail": "Live Trace, an experimental tool, can leave some areas of a photo untraced.",
+   "workaround": "Adjust the trace settings, or trace the missing parts by hand.",
+   "since": 117,
+   "state": "open",
+   "fixedIn": null
+  },
+  {
+   "id": "restore-test-builds",
+   "title": "Restore Purchase in Test Builds",
+   "detail": "Purchases cannot be restored in TestFlight builds. Everything is already open for testers.",
+   "workaround": "",
+   "since": 128,
+   "state": "open",
+   "fixedIn": null
+  }
+ ]
 }

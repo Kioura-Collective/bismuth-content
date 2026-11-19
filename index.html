@@ -30,6 +30,14 @@ h1{margin:4px 0 0;font-size:44px;line-height:1.05;letter-spacing:-.02em;font-wei
 .stat b{display:block;font-size:26px;letter-spacing:-.01em}
 .stat span{font-size:12px;color:var(--ink2);text-transform:uppercase;letter-spacing:.1em;font-weight:600}
 .stat.new b{color:var(--accent)} .stat.improved b{color:var(--teal)} .stat.fixed b{color:var(--gold)}
+.issues{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin:0 0 48px}
+.issues h2{margin:0 0 4px;font-size:20px}
+.issues .sub{color:var(--ink2);font-size:14px;margin:0 0 14px}
+.issue{border-top:1px solid var(--line);padding:12px 0}
+.issue b{display:block;font-size:15px}
+.issue p{margin:4px 0 0;color:var(--ink2);font-size:14px;line-height:1.5}
+.issue .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:99px;padding:2px 8px;margin-left:8px;vertical-align:2px;color:var(--gold);border:1px solid rgba(255,198,90,.4)}
+.issue .tag.fixed{color:var(--teal);border-color:rgba(63,224,188,.4)}
 .timeline{--rail:44px;--lx:9px;position:relative;padding-left:var(--rail)}
 .timeline:before{content:"";position:absolute;left:calc(var(--lx) - 1px);top:12px;bottom:40px;width:2px;
   background:linear-gradient(var(--accent),rgba(255,255,255,.10) 28%)}
@@ -82,6 +90,7 @@ footer{margin-top:48px;color:var(--ink2);font-size:13px;text-align:center}
   <div class="stat improved"><b>75</b><span>Improved</span></div>
   <div class="stat fixed"><b>37</b><span>Fixed</span></div>
 </div>
+<section class="issues" id="known-issues"><h2>Known Issues</h2><p class="sub">Problems we know about and are working on, with a way around them where there is one.</p><div class="issue"><b>Undo With the Pen Tools<span class="tag">Known since build 130</span></b><p>Undo can behave unexpectedly after drawing with the pen tools.</p></div><div class="issue"><b>Feedback Screenshots Can Show Your Artwork<span class="tag">Known since build 124</span></b><p>Screenshots taken in Feedback Mode show whatever is on screen, including your artwork.</p><p>Use Cover to hide anything private before saving a note. A coming update hides artwork automatically.</p></div><div class="issue"><b>SVG and PDF Export Ignore Masks and Clipping<span class="tag">Known since build 121</span></b><p>Masked or clipped layers export as if the mask or clip were not there. The app warns you when this applies.</p><p>Export a PNG, or use Print Stencil, which follows masks and clipping.</p></div><div class="issue"><b>Masks Can Look Confusing in Print Stencil<span class="tag">Known since build 126</span></b><p>Masks can show unexpected marks in the Print Stencil preview. A full review of masks is planned.</p><p>Clipping works as expected and can often be used instead.</p></div><div class="issue"><b>The Eraser Leaves Rounded Ends<span class="tag">Known since build 117</span></b><p>Erasing part of a line leaves rounded ends instead of a clean cut.</p><p>Trim cuts lines back to a crossing with clean ends.</p></div><div class="issue"><b>Live Trace Can Miss Parts of a Picture<span class="tag">Known since build 117</span></b><p>Live Trace, an experimental tool, can leave some areas of a photo untraced.</p><p>Adjust the trace settings, or trace the missing parts by hand.</p></div><div class="issue"><b>Restore Purchase in Test Builds<span class="tag">Known since build 128</span></b><p>Purchases cannot be restored in TestFlight builds. Everything is already open for testers.</p></div></section>
 <div class="timeline">
 <div class="entry latest">
   <div class="when"><span class="dot"></span><span class="builds">Build 130</span><span class="badge">Latest</span><span class="date">18 November 2026</span></div>
