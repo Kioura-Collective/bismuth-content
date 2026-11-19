@@ -1,5 +1,5 @@
 {
- "version": 1795070534,
+ "version": 1795120671,
  "lessons": [
   {
    "id": "radial-menu",
@@ -28,7 +28,7 @@
      "opened": "Radial Menu in this list sets what it shows, how large it is and which tools stay on it. Finish closes Preferences."
     }
    ],
-   "revision": 130
+   "revision": 133
   },
   {
    "id": "background",
@@ -46,31 +46,54 @@
      "opened": "Choose Background in this list to pick a living background. Finish closes Preferences."
     }
    ],
-   "revision": 130
+   "revision": 133
   },
   {
    "id": "widgets",
-   "title": "Add Bismuth Widgets",
-   "summary": "Keep your drawings and a daily idea on your Home Screen.",
+   "title": "Widget Tour",
+   "summary": "See each Home Screen widget and how to add it.",
    "icon": "square.grid.2x2",
    "category": "Start Here",
-   "addedIn": 130,
-   "minBuild": 130,
+   "addedIn": 131,
+   "minBuild": 131,
+   "practice": false,
    "steps": [
     {
      "title": "Add a Widget",
-     "text": "On your Home Screen, hold an empty spot, tap Edit, then Add Widget, and choose Bismuth Studio."
+     "text": "On your Home Screen, hold an empty spot until the icons wiggle. Tap Edit in the top corner, then Add Widget.",
+     "image": "lesson-widgets-add"
     },
     {
-     "title": "Pick What Helps",
-     "text": "Recent Drawings reopens your work. Quick Start begins a new drawing. Daily Pattern offers a new symmetry idea each day."
+     "title": "Choose Bismuth Studio",
+     "text": "Pick Bismuth Studio in the list. Swipe across to see each widget and size, then tap Add Widget.",
+     "image": "lesson-widgets-list"
+    },
+    {
+     "title": "Recent Drawings",
+     "text": "Shows the drawings you worked on last. Tap one to open it straight away. The larger sizes show up to six.",
+     "image": "lesson-widgets-recent"
+    },
+    {
+     "title": "Quick Start",
+     "text": "One tap starts a new drawing. The wider size also continues your last drawing, opens the gallery or opens Learn Bismuth.",
+     "image": "lesson-widgets-quick"
+    },
+    {
+     "title": "Daily Pattern",
+     "text": "A new symmetry idea each day. Tap it to start a new drawing with that symmetry already set up.",
+     "image": "lesson-widgets-daily"
+    },
+    {
+     "title": "Last Drawing",
+     "text": "Keeps the drawing you worked on last in view, with when you last edited it. Tap it to carry on.",
+     "image": "lesson-widgets-last"
     },
     {
      "title": "Private on the Lock Screen",
      "text": "Drawing names and pictures on Recent Drawings are hidden while your iPad is locked."
     }
    ],
-   "revision": 130
+   "revision": 133
   },
   {
    "id": "symmetry",
@@ -100,7 +123,7 @@
      "done": "draw"
     }
    ],
-   "revision": 130
+   "revision": 133
   },
   {
    "id": "clean-joins",
@@ -132,7 +155,7 @@
      "callout": "Touch Puck"
     }
    ],
-   "revision": 130
+   "revision": 133
   },
   {
    "id": "trim",
@@ -163,7 +186,244 @@
      "done": "draw"
     }
    ],
-   "revision": 130
+   "revision": 133
+  },
+  {
+   "id": "trim-circle",
+   "title": "Circle to Trim",
+   "summary": "Remove a leftover dot or piece by circling it.",
+   "icon": "scissors",
+   "category": "Drawing",
+   "addedIn": 131,
+   "minBuild": 131,
+   "steps": [
+    {
+     "title": "Leave a Stray Mark",
+     "text": "Draw a short line or a dot away from the rest of your drawing.",
+     "tool": "pen",
+     "draw": true,
+     "done": "draw"
+    },
+    {
+     "title": "Circle It",
+     "text": "With Trim, draw a loop all the way around the stray mark. Everything wholly inside the loop is removed.",
+     "tool": "trim",
+     "draw": true,
+     "done": "draw"
+    },
+    {
+     "title": "Undo If Needed",
+     "text": "One undo brings back everything the loop removed."
+    }
+   ],
+   "revision": 133
+  },
+  {
+   "id": "join-ends",
+   "title": "Join Two Line Ends",
+   "summary": "Circle two ends that nearly meet and they join in a clean point.",
+   "icon": "arrow.right.and.line.vertical.and.arrow.left",
+   "category": "Drawing",
+   "addedIn": 133,
+   "minBuild": 133,
+   "steps": [
+    {
+     "title": "Switch It On",
+     "text": "This one is experimental: switch on Join Ends in Preferences, Experimental. Then pick the Trim tool."
+    },
+    {
+     "title": "Choose Join",
+     "text": "Tap the Trim chip on the left toolbar so it reads Join, or tap the new button beside the puck. Your mark now shows in pink.",
+     "target": "tour.puck",
+     "callout": "Beside the Puck"
+    },
+    {
+     "title": "Circle the Ends",
+     "text": "Circle, or scribble over, the spot where two line ends nearly meet. Both lines are carried on to one clean point. Ends that overshoot each other are cut back to the point instead.",
+     "draw": true
+    },
+    {
+     "title": "Back to Cutting",
+     "text": "Tap the chip again so it reads Cut and Trim works as before. One Undo takes a join back."
+    }
+   ],
+   "revision": 133
+  },
+  {
+   "id": "mirror-curve",
+   "title": "Mirror a Curve",
+   "summary": "Draw one side of a petal and add the other.",
+   "icon": "arrow.left.and.right.righttriangle.left.righttriangle.right",
+   "category": "Drawing",
+   "addedIn": 132,
+   "minBuild": 132,
+   "steps": [
+    {
+     "title": "Draw One Side",
+     "text": "Draw a curve from the base of a petal to its tip and hold still at the end until it snaps smooth.",
+     "tool": "pen",
+     "draw": true,
+     "done": "draw"
+    },
+    {
+     "title": "Tap Mirror Curve",
+     "text": "A new button appears beside the puck. Tap it and the matching side is added, meeting at both ends.",
+     "target": "tour.puck",
+     "callout": "Beside the Puck",
+     "draw": true
+    },
+    {
+     "title": "Any Line, Any Time",
+     "text": "Lasso a curved line and tap Mirror in the bar to do the same later. One Undo takes it back."
+    }
+   ],
+   "revision": 133
+  },
+  {
+   "id": "offset-line",
+   "title": "Even Parallel Lines",
+   "summary": "Add a line at a set distance from another.",
+   "icon": "circle.circle",
+   "category": "Drawing",
+   "addedIn": 132,
+   "minBuild": 132,
+   "steps": [
+    {
+     "title": "Draw an Outline",
+     "text": "Draw a closed shape or a single line on the page.",
+     "tool": "pen",
+     "draw": true,
+     "done": "draw"
+    },
+    {
+     "title": "Select It",
+     "text": "Lasso the line, then tap Offset in the bar that appears.",
+     "tool": "lasso",
+     "draw": true
+    },
+    {
+     "title": "Set the Distance",
+     "text": "Drag Distance, or tap minus and plus for fine steps. Choose Outside or Inside. The preview line shows the result."
+    },
+    {
+     "title": "Tap Done",
+     "text": "The new line is added in the same colour and width, with an even gap all the way round."
+    }
+   ],
+   "revision": 133
+  },
+  {
+   "id": "repeat-copy",
+   "title": "Repeat a Copy",
+   "summary": "Build an even row or ring from one copy.",
+   "icon": "square.on.square",
+   "category": "Drawing",
+   "addedIn": 133,
+   "minBuild": 133,
+   "steps": [
+    {
+     "title": "Select and Duplicate",
+     "text": "Lasso a shape, then tap Duplicate in the bar that appears.",
+     "tool": "lasso",
+     "draw": true
+    },
+    {
+     "title": "Place the First Copy",
+     "text": "Move, turn or resize the copy to where the next one belongs, then tap Done."
+    },
+    {
+     "title": "Tap Repeat",
+     "text": "Each tap adds another copy by the same step, so the spacing stays even. Turn the copy for a ring, or turn and shrink it for a spiral."
+    },
+    {
+     "title": "Finish",
+     "text": "Tap Done, or just keep drawing. Each copy is one Undo."
+    }
+   ],
+   "revision": 133
+  },
+  {
+   "id": "motif-along-a-line",
+   "title": "Repeat a Motif Along a Line",
+   "summary": "Draw a line and a set number of motifs land evenly along it.",
+   "icon": "point.bottomleft.forward.to.point.topright.scurvepath",
+   "category": "Drawing",
+   "addedIn": 133,
+   "minBuild": 133,
+   "steps": [
+    {
+     "title": "Switch It On",
+     "text": "This one is experimental: switch on Motif Along a Line in Preferences, Experimental. Then pick the Stamp tool, tap it again to open your motifs, and switch on Along a Line."
+    },
+    {
+     "title": "Choose How Many",
+     "text": "Set Count to the exact number of copies you want, such as seven. Size sets how big each one is. You can also drag the Count chip on the left toolbar."
+    },
+    {
+     "title": "Draw the Line",
+     "text": "Draw a line anywhere on the page. A light preview shows where each copy will land. Lift, and the copies are placed evenly, with the first and last at the ends of your line."
+    },
+    {
+     "title": "Loops and Direction",
+     "text": "End your line where it began and the copies spread evenly all the way round. Follow the Line turns each copy to match the line; switch it off to keep them upright. One Undo removes the whole set."
+    }
+   ],
+   "revision": 133
+  },
+  {
+   "id": "lattice-colour",
+   "title": "Colour a Lattice",
+   "summary": "Pick colours for lines and points, and blend them level by level.",
+   "icon": "paintpalette",
+   "category": "Drawing",
+   "addedIn": 133,
+   "minBuild": 133,
+   "steps": [
+    {
+     "title": "Open Colour",
+     "text": "Open Lattice, tap Drawing and scroll to Colour."
+    },
+    {
+     "title": "Pick a Colour",
+     "text": "Tap Lines or Points and pick a colour. The preview changes straight away. Use Pen Colour goes back to your pen's colour."
+    },
+    {
+     "title": "Colour by Level",
+     "text": "Switch on Colour by Level and pick a Deepest Level colour. Each level blends a step further towards it."
+    },
+    {
+     "title": "Send It",
+     "text": "At the foot of the controls, tap Send to Canvas to add it to this drawing, or Send to a New Drawing to start a fresh page with it."
+    }
+   ],
+   "revision": 133
+  },
+  {
+   "id": "close-line",
+   "title": "Close My Line",
+   "summary": "Finish near your start and the line joins up.",
+   "icon": "circle.dashed",
+   "category": "Drawing",
+   "addedIn": 132,
+   "minBuild": 132,
+   "steps": [
+    {
+     "title": "Draw a Loop",
+     "text": "Draw a loop and finish near where you began. The line joins up for you.",
+     "tool": "pen",
+     "draw": true,
+     "done": "draw"
+    },
+    {
+     "title": "Curves Stay Curved",
+     "text": "Curves stay curved and straight sides stay straight where the ends meet."
+    },
+    {
+     "title": "Change It",
+     "text": "Hold Clean Joins on the radial menu to switch Close My Line off, or to change how near you need to finish."
+    }
+   ],
+   "revision": 133
   },
   {
    "id": "steady-lines",
@@ -192,7 +452,7 @@
      "done": "draw"
     }
    ],
-   "revision": 130
+   "revision": 133
   },
   {
    "id": "fill-gaps",
@@ -223,7 +483,35 @@
      "draw": true
     }
    ],
-   "revision": 130
+   "revision": 133
+  },
+  {
+   "id": "drag-fill",
+   "title": "Drag Colour to Fill",
+   "summary": "Fill a shape by dragging the colour onto it.",
+   "icon": "drop.fill",
+   "category": "Drawing",
+   "addedIn": 132,
+   "minBuild": 132,
+   "steps": [
+    {
+     "title": "Draw a Shape",
+     "text": "Draw a closed shape on the page.",
+     "tool": "pen",
+     "draw": true,
+     "done": "draw"
+    },
+    {
+     "title": "Drag the Colour",
+     "text": "Drag the colour circle at the foot of the left toolbar onto the shape, then let go. The shape fills and the Fill tool is now on.",
+     "draw": true
+    },
+    {
+     "title": "Keep Filling",
+     "text": "Tap more shapes to fill them with the same colour."
+    }
+   ],
+   "revision": 133
   },
   {
    "id": "clip-pattern",
@@ -279,7 +567,7 @@
      "opened": "The preview shows only what the clip keeps. Dotted lines are one of the line styles you can print. Finish closes this panel."
     }
    ],
-   "revision": 130
+   "revision": 133
   },
   {
    "id": "mask-pattern",
@@ -319,7 +607,7 @@
      "done": "draw"
     }
    ],
-   "revision": 130
+   "revision": 133
   },
   {
    "id": "print-stencil",
@@ -342,7 +630,35 @@
      "text": "Set the width on skin, switch on Mirror for Transfer if you need it, and check the preview before printing."
     }
    ],
-   "revision": 130
+   "revision": 133
+  },
+  {
+   "id": "stencil-marks",
+   "title": "Line Up Your Stencil",
+   "summary": "Add alignment marks and check for gaps that are too tight.",
+   "icon": "plus.viewfinder",
+   "category": "Stencils",
+   "addedIn": 131,
+   "minBuild": 131,
+   "steps": [
+    {
+     "title": "Open Print Stencil",
+     "text": "Open Print Stencil, then scroll down to Marks and Checks.",
+     "target": "tour.stencil",
+     "callout": "Print Stencil",
+     "open": "finish",
+     "opened": "Scroll down in this panel and open Marks and Checks."
+    },
+    {
+     "title": "Alignment Marks",
+     "text": "Switch on Alignment Marks to print a centre cross and edge marks. They help you line the stencil up on the body, or with another sheet."
+    },
+    {
+     "title": "Gap Check",
+     "text": "Smallest Gap sets how close lines may sit. A warning under the preview tells you when gaps may close up as the tattoo heals. The count is an estimate."
+    }
+   ],
+   "revision": 133
   },
   {
    "id": "feedback-mode",
@@ -362,19 +678,28 @@
     },
     {
      "title": "Add a Note",
-     "text": "Tap Add Note and mark up the screenshot. Your artwork is hidden unless you choose to include it. Words are optional, and you can tap a saved note to change it later."
+     "text": "Tap Add Note and mark up the screenshot with the pen, highlighter, arrow, box or ring. Pick a colour and width from the bar, or tap the floating puck. Your artwork is hidden unless you choose to include it."
+    },
+    {
+     "title": "Type Right on the Screenshot",
+     "text": "Choose Text Note, tap where the problem is and type. Each note gets a number you can mention in your words. Drag a note to move it, and use Cover to hide anything private."
+    },
+    {
+     "title": "Zoom In to Mark Small Things",
+     "text": "Pinch the screenshot with two fingers to zoom, turn or slide it, then mark it up as usual. Tap Fit to see the whole screenshot again."
     },
     {
      "title": "Send When Ready",
      "text": "Review your notes and send them together. Claude reads them only if you switch that on."
     }
    ],
-   "revision": 130
+   "minBuild": 133,
+   "revision": 133
   }
  ],
  "news": [],
  "update": {
-  "build": 130
+  "build": 133
  },
  "knownIssues": [
   {
@@ -383,8 +708,8 @@
    "detail": "Undo can behave unexpectedly after drawing with the pen tools.",
    "workaround": "",
    "since": 130,
-   "state": "open",
-   "fixedIn": null
+   "fixedIn": 131,
+   "state": "fixed"
   },
   {
    "id": "feedback-artwork",
@@ -392,8 +717,8 @@
    "detail": "Screenshots taken in Feedback Mode show whatever is on screen, including your artwork.",
    "workaround": "Use Cover to hide anything private before saving a note. A coming update hides artwork automatically.",
    "since": 124,
-   "state": "open",
-   "fixedIn": null
+   "fixedIn": 131,
+   "state": "fixed"
   },
   {
    "id": "vector-masks",
@@ -401,8 +726,8 @@
    "detail": "Masked or clipped layers export as if the mask or clip were not there. The app warns you when this applies.",
    "workaround": "Export a PNG, or use Print Stencil, which follows masks and clipping.",
    "since": 121,
-   "state": "open",
-   "fixedIn": null
+   "fixedIn": 133,
+   "state": "fixed"
   },
   {
    "id": "stencil-masks",
@@ -419,8 +744,8 @@
    "detail": "Erasing part of a line leaves rounded ends instead of a clean cut.",
    "workaround": "Trim cuts lines back to a crossing with clean ends.",
    "since": 117,
-   "state": "open",
-   "fixedIn": null
+   "fixedIn": 131,
+   "state": "fixed"
   },
   {
    "id": "live-trace-gaps",

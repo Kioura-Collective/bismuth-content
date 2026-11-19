@@ -1,5 +1,201 @@
 [
   {
+    "title": "Join Ends, Motif Along a Line and Lattice Colours",
+    "builds": "Build 133",
+    "date": "19 November 2026",
+    "summary": "Join line ends in one move, repeat a motif along a line, colour your lattices, and export masks as true vectors.",
+    "new": [
+      [
+        "Join Ends (Experimental)",
+        "With the Trim tool set to Join, circle two line ends that nearly meet and they join in one clean point. Switch it on in Preferences, Experimental."
+      ],
+      [
+        "Motif Along a Line (Experimental)",
+        "Draw a line with the Stamp tool and a set number of motifs land evenly along it, or all the way round a closed loop. Switch it on in Preferences, Experimental."
+      ],
+      [
+        "Repeat",
+        "After you Duplicate and place a copy, tap Repeat to add more copies by the same step, for an even row, ring or spiral."
+      ],
+      [
+        "Lattice Colours",
+        "Pick colours for lines and points, blend them level by level with Colour by Level, and send a lattice straight to a new drawing."
+      ],
+      [
+        "Zoom the Feedback Screenshot",
+        "On Add Note, pinch with two fingers to zoom, turn and slide the screenshot. Tap Fit to see it all again."
+      ]
+    ],
+    "improved": [
+      [
+        "Hold to Snap Joins Line Ends",
+        "When a held curve snaps, an end that stops just short of another line's end is carried on to meet it."
+      ],
+      [
+        "Off-Centre Motifs",
+        "A motif drawn away from the centre now stamps at full size, right under the Pencil."
+      ],
+      [
+        "Lattice Thumbnails",
+        "Saved lattices show their saved line colour."
+      ]
+    ],
+    "fixed": [
+      [
+        "SVG and PDF Export",
+        "Masks and clipped layers now export as you see them, still as clean vectors."
+      ],
+      [
+        "PDF Line Ends",
+        "Round line ends no longer show a small white notch."
+      ]
+    ]
+  },
+  {
+    "title": "Markup Tools, Mirror Curve and Even Offsets",
+    "builds": "Build 132",
+    "date": "19 November 2026",
+    "summary": "Mark up feedback like a pro, mirror a curve with one tap, and add perfectly even parallel lines.",
+    "new": [
+      [
+        "Feedback Markup Tools",
+        "Add text notes with numbers, arrows, boxes, rings and a highlighter to feedback screenshots, in six colours, with a puck for quick tool changes."
+      ],
+      [
+        "Mirror Curve",
+        "After a curve snaps smooth, tap Mirror Curve beside the puck to add its matching side."
+      ],
+      [
+        "Offset",
+        "Lasso a line or outline and tap Offset to add an even, parallel copy at a set distance."
+      ],
+      [
+        "Close My Line",
+        "Finish a stroke near its start and it joins up smoothly, keeping curves curved."
+      ],
+      [
+        "Drag Colour to Fill",
+        "Drag the colour circle onto a shape to fill it."
+      ],
+      [
+        "Ready Stencil Widget",
+        "Your last drawing on the Home Screen, one tap from Print Stencil."
+      ],
+      [
+        "Large Quick Start Widget",
+        "Adds New Pattern and Print Stencil, and New Lattice when Lattice is switched on."
+      ]
+    ],
+    "improved": [
+      [
+        "Faster Gallery",
+        "Thumbnails load in the background, so large galleries open and scroll more smoothly."
+      ],
+      [
+        "Faster Print Stencil",
+        "The preview no longer freezes the screen on large prints, and the gap check is quicker."
+      ],
+      [
+        "Faster Saved Lattices",
+        "Saved lattice previews no longer freeze the gallery."
+      ],
+      [
+        "Tool Families Open Downward",
+        "Brush and tool choices open over the toolbar, where your hand does not cover them."
+      ],
+      [
+        "Clearer Transform Guides",
+        "Snap guides are dashed and the turn handle has its own colour."
+      ],
+      [
+        "Clearer Size Readout",
+        "The size and stabiliser readouts are easier to read."
+      ],
+      [
+        "Clearer Switches",
+        "Switches now show a visible track when off."
+      ],
+      [
+        "Clip Icon",
+        "Clip has its own hand-drawn icon."
+      ],
+      [
+        "Version in About",
+        "Preferences shows the version with the build number."
+      ]
+    ],
+    "fixed": [
+      [
+        "Dots Fill Covering the Page",
+        "A dots fill no longer spills over the open page."
+      ],
+      [
+        "Clean Joins Colour",
+        "Clean Joins is the same colour on the puck as on the radial menu."
+      ],
+      [
+        "Long Motif Lists",
+        "The motif panel now scrolls instead of running off the screen."
+      ]
+    ]
+  },
+  {
+    "title": "Private Feedback, Cleaner Cuts and Stencil Marks",
+    "builds": "Build 131",
+    "date": "19 November 2026",
+    "summary": "Your artwork stays out of feedback, the eraser cuts cleanly, and stencils are easier to line up.",
+    "new": [
+      [
+        "Artwork Hidden From Feedback",
+        "Feedback screenshots hide your artwork, photos and drawing names unless you choose to include them."
+      ],
+      [
+        "Alignment Marks",
+        "Print Stencil can add a centre cross and edge marks to help line up a stencil."
+      ],
+      [
+        "Gap Check",
+        "Print Stencil warns when lines sit too close together at the finished size."
+      ],
+      [
+        "Circle to Trim",
+        "Circle a leftover dot or piece with Trim to remove it."
+      ],
+      [
+        "Known Issues",
+        "What's New now lists the problems we know about, with ways around them."
+      ],
+      [
+        "Widget Tour",
+        "A picture guide to each widget and how to add it."
+      ],
+      [
+        "Privacy Policy and Support",
+        "Find both in Preferences, under About."
+      ]
+    ],
+    "improved": [
+      [
+        "Cleaner Eraser",
+        "Erasing part of a line now leaves a clean, flat cut."
+      ],
+      [
+        "App Icon",
+        "The icon no longer shows a second edge inside its corners."
+      ]
+    ],
+    "fixed": [
+      [
+        "Undo With the Curve Pen",
+        "Undo and redo now work properly while placing and editing curves."
+      ],
+      [
+        "Two-Finger Undo",
+        "A two-finger tap now undoes while Draw with a Finger is on."
+      ]
+    ]
+  },
+  {
     "title": "Widgets",
     "builds": "Build 130",
     "date": "18 November 2026",
