@@ -1,5 +1,5 @@
 {
- "version": 1795041077,
+ "version": 1795049092,
  "lessons": [
   {
    "id": "radial-menu",
@@ -24,9 +24,11 @@
      "title": "Make It Yours",
      "text": "Preferences > Radial Menu lets you choose what it shows, how large it is and which tools stay on it.",
      "target": "learn.preferences",
-     "callout": "Preferences"
+     "callout": "Preferences",
+     "opened": "Radial Menu in this list sets what it shows, how large it is and which tools stay on it. Finish closes Preferences."
     }
-   ]
+   ],
+   "revision": 128
   },
   {
    "id": "background",
@@ -40,9 +42,11 @@
      "title": "Plain by Default",
      "text": "New installs start plain, so the app stays quick on every iPad. Open Preferences, then Background, to choose a living background.",
      "target": "learn.preferences",
-     "callout": "Preferences"
+     "callout": "Preferences",
+     "opened": "Choose Background in this list to pick a living background. Finish closes Preferences."
     }
-   ]
+   ],
+   "revision": 128
   },
   {
    "id": "symmetry",
@@ -71,7 +75,8 @@
      "draw": true,
      "done": "draw"
     }
-   ]
+   ],
+   "revision": 128
   },
   {
    "id": "clean-joins",
@@ -102,7 +107,8 @@
      "target": "tour.puck",
      "callout": "Touch Puck"
     }
-   ]
+   ],
+   "revision": 128
   },
   {
    "id": "trim",
@@ -132,7 +138,68 @@
      "draw": true,
      "done": "draw"
     }
-   ]
+   ],
+   "revision": 128
+  },
+  {
+   "id": "steady-lines",
+   "title": "Steady Your Lines",
+   "summary": "Use Smoothing and the rope to calm a shaky hand.",
+   "icon": "scribble.variable",
+   "category": "Drawing",
+   "addedIn": 128,
+   "steps": [
+    {
+     "title": "Open the Radial Menu",
+     "text": "Tap the touch puck. Smoothing, Clean Joins, Pressure and the Rope Stabiliser are the small switches on the ring.",
+     "target": "tour.puck",
+     "callout": "Tap the Puck",
+     "done": "dial"
+    },
+    {
+     "title": "Hold for Settings",
+     "text": "Tap a switch to turn it on or off. Hold it to open the settings for that one control. Tap the page when you are finished."
+    },
+    {
+     "title": "Try It",
+     "text": "Draw a slow, wavy line and see how it settles.",
+     "tool": "pen",
+     "draw": true,
+     "done": "draw"
+    }
+   ],
+   "revision": 128
+  },
+  {
+   "id": "fill-gaps",
+   "title": "Fill a Shape with Small Gaps",
+   "summary": "Fill closes tiny openings in a line for you.",
+   "icon": "drop",
+   "category": "Drawing",
+   "addedIn": 128,
+   "steps": [
+    {
+     "title": "Draw a Shape",
+     "text": "Draw a closed shape on the page. A tiny gap where the ends meet is fine.",
+     "tool": "pen",
+     "draw": true,
+     "done": "draw"
+    },
+    {
+     "title": "Fill It",
+     "text": "Tap inside the shape. If a small gap would let the colour escape, Fill closes it and tells you.",
+     "tool": "fill",
+     "draw": true,
+     "done": "draw"
+    },
+    {
+     "title": "Larger Gaps",
+     "text": "For a wider opening, drag the Gap control on the left toolbar upward, then tap again.",
+     "tool": "fill",
+     "draw": true
+    }
+   ],
+   "revision": 128
   },
   {
    "id": "clip-pattern",
@@ -181,12 +248,14 @@
     },
     {
      "title": "Print What You See",
-     "text": "Print Stencil follows your clipped layers, so the stencil matches the page.",
+     "text": "Open Print Stencil. It follows your clipped layers, so the stencil matches the page.",
      "target": "tour.stencil",
      "callout": "Print Stencil",
-     "open": "finish"
+     "open": "stencilDotted",
+     "opened": "The preview shows only what the clip keeps. Dotted lines are one of the line styles you can print. Finish closes this panel."
     }
-   ]
+   ],
+   "revision": 128
   },
   {
    "id": "mask-pattern",
@@ -225,7 +294,8 @@
      "draw": true,
      "done": "draw"
     }
-   ]
+   ],
+   "revision": 128
   },
   {
    "id": "print-stencil",
@@ -240,42 +310,46 @@
      "text": "When your design is ready, Print Stencil prepares it for skin.",
      "target": "tour.stencil",
      "callout": "Print Stencil",
-     "open": "finish"
+     "open": "finish",
+     "opened": "Tap Next for the settings that matter most."
     },
     {
      "title": "Set It Up",
      "text": "Set the width on skin, switch on Mirror for Transfer if you need it, and check the preview before printing."
     }
-   ]
+   ],
+   "revision": 128
   },
   {
    "id": "feedback-mode",
    "title": "Send Feedback as You Test",
    "summary": "Mark up the screen and dictate notes.",
-   "icon": "text.bubble",
+   "icon": "bubble.and.pencil",
    "category": "Testing",
    "addedIn": 124,
    "testers": true,
    "steps": [
     {
      "title": "Start Feedback Mode",
-     "text": "Open the menu and choose Feedback Mode. A small bar stays on screen while you test.",
-     "target": "learn.menu",
-     "callout": "Menu"
+     "text": "Tap the speech bubble on the right-hand toolbar. A small bar stays on screen while you test, and glows until you tap Stop.",
+     "target": "learn.feedback",
+     "callout": "Feedback Mode",
+     "open": "finish"
     },
     {
      "title": "Add a Note",
-     "text": "Tap Add Note, mark up the screenshot, cover anything private, then type or dictate what you noticed."
+     "text": "Tap Add Note, mark up the screenshot, cover anything private, then type or dictate what you noticed. Words are optional. Tap a saved note to change it later."
     },
     {
      "title": "Send When Ready",
      "text": "Review your notes and send them together. Claude reads them only if you switch that on."
     }
-   ]
+   ],
+   "revision": 128
   }
  ],
  "news": [],
  "update": {
-  "build": 127
+  "build": 128
  }
 }

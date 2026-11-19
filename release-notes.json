@@ -1,5 +1,69 @@
 [
   {
+    "title": "Your iPad Review, Fixed",
+    "builds": "Build 128",
+    "date": "18 November 2026",
+    "summary": "Controls answer every tap, stencils print what you see, and fills stay inside the lines.",
+    "new": [
+      [
+        "Pinch Back to Your View",
+        "Double-tap to fit the page, then pinch outward to return to where you were."
+      ],
+      [
+        "Feedback From Anywhere",
+        "Start Feedback Mode from the drawing, review saved notes on its bar and edit them later."
+      ],
+      [
+        "Two New Lessons",
+        "Learn to steady your lines and fill shapes that have small gaps."
+      ]
+    ],
+    "improved": [
+      [
+        "Clearer Tour and Lessons",
+        "The screen dims only when pointing at a control, and the tour now has a Back button."
+      ],
+      [
+        "Print Stencil Preview",
+        "Pinch, rotate and drag to look closer."
+      ],
+      [
+        "Bigger Airbrush",
+        "The airbrush now goes up to 600."
+      ],
+      [
+        "Lattice",
+        "Pinch and rotate like the main canvas, and your work saves itself when you close it."
+      ],
+      [
+        "Back Where You Left Off",
+        "The app reopens the drawing you were working on."
+      ]
+    ],
+    "fixed": [
+      [
+        "Stuck Toolbar Buttons",
+        "Tools no longer look selected or ignore a tap after a touch is interrupted."
+      ],
+      [
+        "Overlapping Colour in Stencils",
+        "Strokes of the same solid colour now print as one clean outline."
+      ],
+      [
+        "Fill Leaks",
+        "Fill closes tiny gaps instead of flooding the page."
+      ],
+      [
+        "Lasso and Move",
+        "Move now moves only what you selected."
+      ],
+      [
+        "Eraser",
+        "With symmetry off, the eraser cuts only the line under it."
+      ]
+    ]
+  },
+  {
     "title": "Learn Bismuth",
     "builds": "Build 127",
     "date": "18 November 2026",
