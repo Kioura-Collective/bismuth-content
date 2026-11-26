@@ -1,5 +1,5 @@
 {
- "version": 1795442180,
+ "version": 1795680018,
  "lessons": [
   {
    "id": "radial-menu",
@@ -22,13 +22,13 @@
     },
     {
      "title": "Make It Yours",
-     "text": "Preferences > Radial Menu lets you choose what it shows, how large it is and which tools stay on it.",
+     "text": "Tap a + on the ring around the menu to put any tool or command there. Preferences > Radial Menu lets you choose what it shows, how large it is and which tools stay on it.",
      "target": "learn.preferences",
      "callout": "Preferences",
      "opened": "Radial Menu in this list sets what it shows, how large it is and which tools stay on it. Finish closes Preferences."
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "same-gestures",
@@ -61,7 +61,7 @@
      "text": "Lattice, the 3D body, Print Stencil's preview, feedback screenshots and On a Photo use the same gestures, wherever they make sense."
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "background",
@@ -79,7 +79,7 @@
      "opened": "Choose Background in this list to pick a living background. Finish closes Preferences."
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "widgets",
@@ -126,7 +126,7 @@
      "text": "Drawing names and pictures on Recent Drawings are hidden while your iPad is locked."
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "symmetry",
@@ -196,7 +196,7 @@
      "callout": "Touch Puck"
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "trim",
@@ -257,7 +257,7 @@
      "text": "One undo brings back everything the loop removed."
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "join-ends",
@@ -286,7 +286,7 @@
     },
     {
      "title": "Back to Cutting",
-     "text": "Tap Trim, just above, to cut again. One Undo takes a join back. You can also put Join on a radial menu dot, or find it in Loupe."
+     "text": "Tap Trim, just above, to cut again. One Undo takes a join back. You can also put Join on the radial menu's Halo, or find it in Loupe."
     }
    ],
    "revision": 149
@@ -316,10 +316,10 @@
     },
     {
      "title": "Any Line, Any Time",
-     "text": "Lasso a curved line and tap Mirror in the bar to do the same later. Tap Deselect, then one Undo takes it back."
+     "text": "Lasso a curved line, tap More in the bar, then Mirror Curve, to do the same later. Tap Deselect, then one Undo takes it back."
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "offset-line",
@@ -339,7 +339,7 @@
     },
     {
      "title": "Select It",
-     "text": "Lasso the line, or a whole outline, then tap Offset in the bar that appears. With several lines selected, each one gets its own offset.",
+     "text": "Lasso the line, or a whole outline, then tap More in the bar that appears and choose Offset. With several lines selected, each one gets its own offset.",
      "tool": "lasso",
      "draw": true
     },
@@ -372,7 +372,7 @@
     },
     {
      "title": "Select It",
-     "text": "Lasso the line, then tap Dashes in the bar that appears.",
+     "text": "Lasso the line, then tap More in the bar that appears and choose Dashes and Dots.",
      "tool": "lasso",
      "draw": true
     },
@@ -385,7 +385,7 @@
      "text": "The pattern is fitted to the line, so it starts and ends on a whole dash and a closed outline meets itself evenly. One Undo brings the line back."
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "repeat-copy",
@@ -415,7 +415,7 @@
      "text": "Tap Done, or just keep drawing. Each copy is one Undo."
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "motif-along-a-line",
@@ -429,7 +429,7 @@
    "steps": [
     {
      "title": "Switch It On",
-     "text": "This one is experimental: switch on Motif Along a Line in Preferences, Experimental. Then pick the Stamp tool, tap it again to open your motifs, and switch on Along a Line."
+     "text": "This one is experimental: switch on Motif Along a Line in Preferences, Experimental. Then tap Motifs in the top bar to open your motifs, and switch on Along a Line."
     },
     {
      "title": "Choose How Many",
@@ -444,7 +444,7 @@
      "text": "End your line where it began and the copies spread evenly all the way round. Follow the Line turns each copy to match the line; switch it off to keep them upright. One Undo removes the whole set."
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "lattice-colour",
@@ -535,7 +535,7 @@
      "text": "Hold Clean Joins or Close My Line on the radial menu to switch Close My Line off, or to change how near you need to finish."
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "steady-lines",
@@ -564,7 +564,7 @@
      "done": "draw"
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "fill-gaps",
@@ -595,7 +595,7 @@
      "draw": true
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "fill-through-outlines",
@@ -615,7 +615,7 @@
     },
     {
      "title": "Fill Through",
-     "text": "Tap LINES on the left toolbar so it says Fill. Fill and Gradient Fill now take in the outline around the shape.",
+     "text": "Tap LINES on the left toolbar so it says Fill. Fill, solid or gradient, now takes in the outline around the shape.",
      "tool": "fill",
      "target": "learn.fillThrough",
      "callout": "Lines"
@@ -632,7 +632,7 @@
      "text": "Hold a layer in Layers and open Shapes and Lines. Simplify merges every fill with its outline; Convert to Shapes and Convert to Lines switch the whole layer between filled shapes and lines."
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "fill-small-gaps",
@@ -671,7 +671,7 @@
      "draw": true
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "drag-fill",
@@ -699,7 +699,7 @@
      "text": "Tap more shapes to fill them with the same colour."
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "export-layers",
@@ -725,7 +725,7 @@
      "text": "PSD gives one pixel layer per Bismuth layer, with its name and opacity, plus a Paper layer you can hide. It takes a few seconds to prepare."
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "pattern-panel",
@@ -751,7 +751,7 @@
     },
     {
      "title": "A Section for Each",
-     "text": "Symmetry, Wallpaper, Repeat, Grid, Fade and Constructions each have a switch and a one-line summary. Switching one on opens its controls; tap a name to open or fold it.",
+     "text": "Symmetry, Wallpaper, Repeat, Grid and Fade each have a switch and a one-line summary. Switching one on opens its controls; tap a name to open or fold it.",
      "target": "learn.symmetry",
      "callout": "Sections"
     },
@@ -767,10 +767,10 @@
     },
     {
      "title": "Put It Where Your Hand Is Not",
-     "text": "Drag the small tab on the panel's top edge and targets appear: the left or right edge, or a corner. Drop it on one to dock it there, anywhere else to float. Tap the tab to fold it to a small bar. The pin keeps it open while you draw."
+     "text": "Drag the small tab on the panel's top edge and targets appear: the sides, the corners and the bottom. Drop it on one to dock it there, anywhere else to float. Tap the tab to fold it to a small bar. The pin keeps it open while you draw."
     }
    ],
-   "revision": 145
+   "revision": 156
   },
   {
    "id": "dock-panels",
@@ -783,14 +783,14 @@
    "steps": [
     {
      "title": "Drag the Tab",
-     "text": "Open Pattern and drag the small tab on its top edge. Six targets appear: each edge and each corner, with an outline of where the panel will land.",
+     "text": "Open Pattern and drag the small tab on its top edge. Targets appear on the sides, in the corners and along the bottom, with an outline of where the panel will land.",
      "open": "pattern",
      "target": "learn.patternPanel",
      "callout": "Pattern Panel"
     },
     {
      "title": "Drop to Dock",
-     "text": "Let go on a target to dock the panel there. Docked down an edge, the page slides aside so its centre stays in view. Let go anywhere else and the panel floats."
+     "text": "Let go on a target to dock the panel there. Full Height runs down a side, and the page slides aside so its centre stays in view; Bottom, Full Width runs along the bottom from rail to rail. Let go anywhere else and the panel floats."
     },
     {
      "title": "Layers Too",
@@ -804,7 +804,7 @@
      "text": "Preferences, Pencil & Touch, Drawing Hand: choose Right-Handed or Left-Handed and every panel moves to the side away from your hand."
     }
    ],
-   "revision": 142
+   "revision": 156
   },
   {
    "id": "grid-builder",
@@ -867,27 +867,28 @@
      "opened": "Choose Drawing in this list, then scroll to History. Done closes Preferences."
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "gradient-fill",
    "title": "Paint With Gradients",
-   "summary": "Lay a gradient across the page, or colour a layer's lines with one.",
+   "summary": "Fill shapes with a gradient, or colour a layer's lines with one.",
    "icon": "square.tophalf.filled",
    "category": "Drawing",
    "addedIn": 141,
    "minBuild": 141,
+   "revision": 157,
    "steps": [
     {
-     "title": "Gradient Fill",
-     "text": "Tap the Fill button twice and pick Gradient Fill. Drag across the page: the gradient runs from where you start to where you lift.",
-     "tool": "gradientFill",
+     "title": "Fill With a Gradient",
+     "text": "Pick Fill, then choose Gradient from the Fill Kind drop-down in the bar under the top bar. Tap inside a shape, or an empty layer: it fills with the gradient at once.",
+     "tool": "fill",
      "draw": true,
      "done": "draw"
     },
     {
      "title": "Choose the Colours",
-     "text": "Tap GRADIENT on the left toolbar. Drag a handle to move a colour, tap the strip to add one, switch Radial, or pick a ready gradient. Start your drag on a filled shape to give just that shape the gradient."
+     "text": "Tap the Gradient chip beside Fill Kind. Drag a handle to move a colour, tap the strip to add one, switch Radial, set the Direction, or pick a ready gradient. Tap a solid fill to turn it into a gradient."
     },
     {
      "title": "Gradient Lines",
@@ -897,8 +898,7 @@
      "title": "One Gradient Everywhere",
      "text": "The Gradient Liner (Across the Page), Lattice's Colour by Level and the page background all use this same gradient control."
     }
-   ],
-   "revision": 154
+   ]
   },
   {
    "id": "clip-pattern",
@@ -954,7 +954,7 @@
      "opened": "The preview shows only what the clip keeps. Dotted lines are one of the line styles you can print. Finish closes this panel."
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "mask-pattern",
@@ -994,7 +994,7 @@
      "done": "draw"
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "print-stencil",
@@ -1017,7 +1017,7 @@
      "text": "Set the width on skin, switch on Mirror for Transfer if you need it, and check the preview before printing."
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "stencil-marks",
@@ -1045,7 +1045,7 @@
      "text": "Smallest Gap sets how close lines may sit. A warning under the preview tells you when gaps may close up as the tattoo heals. The count is an estimate."
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "feedback-mode",
@@ -1105,10 +1105,9 @@
     },
     {
      "title": "Colour the Page Itself",
-     "text": "Tap Fill on the left toolbar until it says Page. Now a tap colours the page under every layer, not a shape.",
-     "tool": "fill",
-     "target": "learn.fillMode",
-     "callout": "Fill Mode"
+     "text": "The page has its own colour under every layer. Open Layers and tap the Page row at the foot of the list, then Colour.",
+     "target": "learn.page",
+     "callout": "Page"
     },
     {
      "title": "Paper, Gradient or Picture",
@@ -1119,7 +1118,7 @@
      "opened": "Choose Paper, Colour, Gradient, Texture or Picture. Textures have Size, Grit and Strength; a gradient has handles to drag, tap or add. Exports keep the page as a Paper layer."
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "text-tool",
@@ -1165,7 +1164,7 @@
      "text": "Create Outlines turns text into plain shapes: filled text becomes one shape, Outline text a line round each letter. It also works on text you select with the lasso."
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "eyedropper",
@@ -1227,7 +1226,7 @@
      "text": "Each setting has one name, icon and colour on the radial menu, in the stroke panel and in Preferences."
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "loupe",
@@ -1259,10 +1258,10 @@
     },
     {
      "title": "Other Ways In",
-     "text": "Put Loupe on a dot around the radial menu with Edit Dots. With a keyboard, Command-K opens it ready to type. The up and down arrows move through the list, Return runs the highlighted row (or the top match), and Escape closes it."
+     "text": "Put Loupe on the radial menu's Halo with Edit Halo. With a keyboard, Command-K opens it ready to type. The up and down arrows move through the list, Return runs the highlighted row (or the top match), and Escape closes it."
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "my-patterns",
@@ -1291,7 +1290,7 @@
      "text": "Your patterns stay first in See All under My Patterns, in every drawing, and in Loupe's Use a Pattern list."
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "snap-adjust",
@@ -1328,7 +1327,7 @@
      "draw": true
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "gallery-size",
@@ -1367,7 +1366,7 @@
     },
     {
      "title": "Bismuth Full",
-     "text": "Some tools are part of Bismuth Full: Repeat, Wallpaper and Fade, Constructions, Lattice, the Full brushes, Gradient Fill, Shape Builder, Print Stencil and more layers. Pick one and a short offer explains what Full adds."
+     "text": "Some tools are part of Bismuth Full: Repeat, Wallpaper and Fade, Constructions, Lattice, the Full brushes, Gradient fills, Shape Builder, Print Stencil and more layers. Pick one and a short offer explains what Full adds."
     },
     {
      "title": "Unlock Once",
@@ -1391,7 +1390,7 @@
    "steps": [
     {
      "title": "Start From a Picture",
-     "text": "Open Lattice. The cards at the top are ready lattices and the ones you saved: tap one to use it. See All shows them all, in My Lattices and Ready."
+     "text": "The diamond opens Lattice beside your drawing; Add to Drawing places it. The cards at the top are ready lattices and the ones you saved: tap one to use it. See All shows them all, in My Lattices and Ready."
     },
     {
      "title": "Open a Section",
@@ -1410,7 +1409,7 @@
      "text": "The bookmark at the top saves this lattice to My Lattices (long press its card to rename or remove it). Reset takes the shape back to one plain ring and keeps your colours."
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "layer-groups",
@@ -1438,7 +1437,7 @@
      "text": "Tap the row to fold the group to one line. Long press it to rename it or ungroup it. Every one of these undoes with a two-finger tap."
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "tool-settings-bar",
@@ -1456,7 +1455,7 @@
     },
     {
      "title": "Its Settings, Up Top",
-     "text": "The bar under the top bar now holds what the Paint Bucket can do: Layer Fill, Dots or Page Background, Fill Outside, Gap Tolerance and Keep Lines. Every tool has its own bar, and a brush's bar has Size and Stabiliser."
+     "text": "The bar under the top bar now holds what the Paint Bucket can do: Solid Fill or Dots, Gap Tolerance and Keep Lines. Every tool has its own bar, and a brush's bar has Size and Stabiliser."
     },
     {
      "title": "Lasso Too",
@@ -1464,7 +1463,7 @@
      "tool": "lasso"
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "puck-buttons",
@@ -1482,15 +1481,15 @@
      "callout": "Preferences"
     },
     {
-     "title": "Choose the Buttons",
-     "text": "Under Buttons, tap a chip to take that button off the puck or put it back: Undo, Redo, Eraser, Trim, Lift to Layer, Tool Switch, Mirror Curve and Mini Loupe. The eye that folds them all always stays."
+     "title": "Choose the Halo",
+     "text": "Tap Edit, then a place in the Halo (the ring around the puck), and type to find any tool or command; your most used come first. Drag a button to another place to move it. The Radial Menu page works the same way."
     },
     {
      "title": "Size It",
      "text": "Under Size, Puck Size, Halo Distance and Button Size work together, so the buttons never crowd the puck. Reset Puck Size puts them back."
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "photo-and-scan",
@@ -1509,20 +1508,20 @@
     },
     {
      "title": "Scan the Body",
-     "text": "On an iPad with LiDAR, tap Scan the Body. Move slowly around the arm, leg or back until the mesh covers it, then tap it. The bright circle is what is kept: set Keep to cover the part."
+     "text": "On an iPad with LiDAR, tap Scan the Body and pick the part. Point the circle at it until it turns violet, then walk round it until the ring is full. The room stays grey and is left out."
     },
     {
      "title": "Place It in 3D",
-     "text": "Tap Use Scan. The 3D Body Preview opens on your scan: tap it to place the design, then size, turn and paint as on the stock body. With Clients on, you choose who the scan is for, and your scans are kept under Clients."
+     "text": "Tap Review: turn the scan to check it, fill gaps, set Smoothness, or Scan More for a spot. Save Scan opens it in the 3D Body Preview, and with Clients on you choose who it is for."
     }
    ],
-   "revision": 154
+   "revision": 157
   },
   {
    "id": "clients",
    "feature": "clients",
-   "title": "Clients and Their Scans",
-   "summary": "Keep each client's projects and body scans together, locked and only on this iPad.",
+   "title": "Clients and Their Projects",
+   "summary": "Keep a client's projects together: scans, designs, sessions, a checklist and an estimate, locked and only on this iPad.",
    "icon": "person.2",
    "category": "Drawing",
    "addedIn": 155,
@@ -1535,23 +1534,181 @@
     },
     {
      "title": "Add a Client",
-     "text": "Tap New Client, type their name and a first project, then Add. Open a project to see its scans."
+     "text": "Tap New Client, type their name and a first project, then Add. Profile holds a phone number, an email and notes, only if you need them."
+    },
+    {
+     "title": "Consent Forms",
+     "text": "Write your own forms under Consent Forms on the first page. On a client's page, Sign a Form lets them tick each statement and sign with a finger or the Pencil. The signed copy is sealed with the client."
+    },
+    {
+     "title": "Plan the Project",
+     "text": "Open a project. Its sections fold open one at a time: Details for the stage and placement, Designs for drawings from your gallery, Sessions to plan each sitting, and a Checklist that starts with the usual steps."
+    },
+    {
+     "title": "Estimate",
+     "text": "Estimate takes the hours (at least and at most) and your rate, and shows the cost range. It always says subject to change: it is an estimate, not a quote."
+    },
+    {
+     "title": "Compose on the Body",
+     "text": "In Composition, tap Compose on the Body. Pick a design, then tap the body to place it as a layer, and add more on top. A Skin Break leaves bare skin around a layer."
     },
     {
      "title": "Scan Into a Project",
-     "text": "In a project, tap Scan Into This Project. The scan is filed there and opens in 3D. Scanning from On a Photo asks who it is for, with the last project first."
+     "text": "In Body Scans, tap Scan Into This Project. The scan is filed there and opens in 3D. Scanning from On a Photo asks who it is for, with the last project first."
     },
     {
      "title": "Tidy Up",
      "text": "Tap a scan to open it in 3D. The … button renames it, moves it to another project or deletes it. Deleting always asks first."
     }
    ],
-   "revision": 154
+   "revision": 157
+  },
+  {
+   "id": "arch-ring",
+   "title": "Bend Into an Arch or a Ring",
+   "summary": "Turn a long band or border into an arch, or all the way round into a ring.",
+   "icon": "rainbow",
+   "category": "Drawing",
+   "feature": "arch",
+   "addedIn": 156,
+   "minBuild": 156,
+   "steps": [
+    {
+     "title": "Draw a Band",
+     "text": "Draw a long strip: a row of zigzags, waves or a border motif, wider than it is tall.",
+     "tool": "pen",
+     "draw": true,
+     "done": "draw"
+    },
+    {
+     "title": "Open Transform",
+     "text": "Tap Move (or lasso part of the drawing first), then tap Arch, the rainbow, in the Transform bar."
+    },
+    {
+     "title": "Set the Bend",
+     "text": "Drag Bend. 180° makes an arch; Full Ring closes it into a circle with the top edge outside. Down bends the other way."
+    },
+    {
+     "title": "Tap Done",
+     "text": "The band is bent for good, in one undo step. Each pattern copy becomes its own line."
+    }
+   ],
+   "revision": 156
+  },
+  {
+   "id": "body-templates",
+   "title": "Draw on a Body Template",
+   "summary": "Start a sleeve or forearm on a real-size template made from the client's measurements.",
+   "icon": "figure.arms.open",
+   "category": "Drawing",
+   "feature": "bodyTemplates",
+   "addedIn": 156,
+   "minBuild": 156,
+   "steps": [
+    {
+     "title": "New Template",
+     "text": "Tap New in the gallery and pick Full Sleeve, Half Sleeve or Forearm under Body Templates. The page is sized so it prints at real size."
+    },
+    {
+     "title": "Read the Template",
+     "text": "The red line runs down the outer arm, the dashed lines are the front and back, and the blue line and circles mark the elbow. The grid is in centimetres or inches."
+    },
+    {
+     "title": "Enter Measurements",
+     "text": "Open Layers and tap Template. Choose the arm and the seam, then set each length and round to the client's measurements. The template reshapes as you go.",
+     "open": "layers",
+     "target": "learn.template",
+     "callout": "Template"
+    },
+    {
+     "title": "Draw Over It",
+     "text": "Draw as usual: the template stays underneath and never takes a stroke. Turn Template down to see your work, or hide the grid, lines or joints."
+    }
+   ],
+   "revision": 156
+  },
+  {
+   "id": "selection-more",
+   "title": "More for a Selection",
+   "summary": "Lift a selection to its own layer or make it a motif.",
+   "icon": "ellipsis.circle",
+   "category": "Drawing",
+   "addedIn": 157,
+   "minBuild": 157,
+   "steps": [
+    {
+     "title": "Lasso Something",
+     "text": "Draw a few lines, then lasso some of them.",
+     "tool": "lasso",
+     "draw": true
+    },
+    {
+     "title": "Tap More",
+     "text": "More, in the bar that appears, holds Lift to a New Layer, Use as Motif, Mirror Curve, Dashes and Dots, and Offset."
+    },
+    {
+     "title": "Make It a Motif",
+     "text": "Use as Motif moves the selection onto its own layer and makes it a motif, ready to stamp. Lift to a New Layer only moves it, so you can work on it alone."
+    }
+   ],
+   "revision": 157
+  },
+  {
+   "id": "top-bar-motifs-constructions",
+   "title": "Motifs and Constructions",
+   "summary": "Two new buttons in the top bar, beside Pattern and Lattice.",
+   "icon": "circles.hexagonpath",
+   "category": "Pattern",
+   "addedIn": 157,
+   "minBuild": 157,
+   "steps": [
+    {
+     "title": "Motifs",
+     "text": "Tap Motifs in the top bar: your motif library opens beside the page. Tap a motif to stamp with it.",
+     "target": "learn.motifs"
+    },
+    {
+     "title": "Constructions",
+     "text": "Tap Constructions for Flower of Life, Metatron's Cube and the other guides. The switch shows or hides the guide; while the panel is open your pick previews on the page.",
+     "target": "learn.constructions"
+    },
+    {
+     "title": "Move Them Anywhere",
+     "text": "Both dock, fold and pin like Pattern and Lattice: drag the tab on top to move one."
+    }
+   ],
+   "revision": 157
+  },
+  {
+   "id": "magic-wand",
+   "feature": "magicWand",
+   "title": "Select With the Wand",
+   "summary": "Tap a shape or line to select it and the same colour touching it.",
+   "icon": "wand.and.rays",
+   "category": "Drawing",
+   "addedIn": 157,
+   "minBuild": 157,
+   "steps": [
+    {
+     "title": "Pick the Lasso",
+     "text": "Choose the Lasso on the left toolbar, then Wand in the bar under the top bar. The small gold dot means it is still experimental.",
+     "tool": "lasso"
+    },
+    {
+     "title": "Tap to Select",
+     "text": "Tap a shape or a line. It is selected with every piece of the same colour that touches it, and the selection bar opens: Move, Duplicate, Delete and more."
+    },
+    {
+     "title": "Add and Remove",
+     "text": "On the selection bar, tap Add and then tap or loop more pieces to join them; Remove takes them away. New starts again."
+    }
+   ],
+   "revision": 157
   }
  ],
  "news": [],
  "update": {
-  "build": 150
+  "build": 157
  },
  "knownIssues": [
   {

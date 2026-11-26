@@ -1,5 +1,173 @@
 [
  {
+  "title": "One Fill Tool, Smoother Lines, Panels That Close the Same Way",
+  "builds": "Build 157",
+  "date": "26 November 2026",
+  "summary": "Fill and Gradient Fill are one tool with Solid, Gradient and Dots, an empty layer fills with one tap, the Liner has its settings in the bar under the top bar, and every floating panel closes with a small x.",
+  "new": [
+   [
+    "One Fill Tool",
+    "Fill Kind in the bar under the top bar picks Solid, Gradient or Dots. A gradient fills a shape with one tap, and an empty layer fills completely, whatever pattern is on."
+   ],
+   [
+    "Transparent PNG",
+    "Menu > Export > Transparent Background leaves the page out of PNG images."
+   ],
+   [
+    "Close Panels Anywhere",
+    "Every floating panel has a small x on the corner opposite its pin."
+   ],
+   [
+    "Change a Radial Menu Place",
+    "Tap a + on the ring to add a tool or command, or hold a filled place to change it."
+   ]
+  ],
+  "improved": [
+   [
+    "The Liner's Bar",
+    "The Liner shows its size, stabiliser, Close Line, Clean Joins and Trim Earlier in the bar under the top bar, like every other tool."
+   ],
+   [
+    "Constructions Ruler",
+    "A held line stays held until you lift, joins without a step, and glows softly so your own line shows through."
+   ],
+   [
+    "Close My Line",
+    "Loops close smoothly; a pointed tip keeps its point."
+   ],
+   [
+    "Stipple",
+    "Stipple Spray comes first, and with Stay Inside the dots stay inside while you spray."
+   ],
+   [
+    "Lattice",
+    "Going back to the Gallery saves a changed lattice."
+   ]
+  ],
+  "fixed": [
+   [
+    "Eraser in Wallpapers",
+    "The Eraser now reaches every copy of a wallpaper, not only those near the centre."
+   ],
+   [
+    "Repeat Line Weight",
+    "Heavy Repeat settings can no longer make lines wider than the page."
+   ],
+   [
+    "Fill Over a Background",
+    "On a layer with a background fill, tapping inside a shape fills the shape."
+   ]
+  ]
+ },
+ {
+  "title": "Scan the Body in Three Steps, Body Templates, Each Tool Keeps Its Settings",
+  "builds": "Build 156",
+  "date": "23 November 2026",
+  "summary": "Scanning the body is three plain steps with a review before saving, a drawing can start on a real-size sleeve template, every tool remembers its own settings, and the puck and radial menu share one editor.",
+  "new": [
+   [
+    "Each Tool Keeps Its Settings",
+    "Size, smoothing, rope and taper are remembered for each tool. It is on to begin with; switch it off in Preferences > Drawing > Tools."
+   ],
+   [
+    "Body Templates (Experimental)",
+    "Start a drawing on a real-size full sleeve, half sleeve or forearm template built from measurements, for the left or right arm."
+   ],
+   [
+    "Arch and Ring (Experimental)",
+    "Transform > Arch bends a strip into an arch or a full ring, with a live preview and one undo step."
+   ],
+   [
+    "Consent Forms and Composition in Clients (Experimental)",
+    "Write your own consent form and have it signed on the iPad. Layer a project's designs on its scan or body, with skin breaks around a design."
+   ],
+   [
+    "Dock Along the Bottom",
+    "Panels can dock Bottom, Full Width, from toolbar to toolbar, as well as Bottom, Middle."
+   ]
+  ],
+  "improved": [
+   [
+    "Scan the Body",
+    "Three steps: the part is found by itself in the middle of the screen, walk round until the ring is full, then Review to turn the scan, fill gaps and set smoothness. Person Only leaves out the room and furniture."
+   ],
+   [
+    "One Editor for the Puck and the Radial Menu",
+    "Tap a place and pick from a list with your most used first, or drag a button to another place."
+   ],
+   [
+    "Larger Brushes",
+    "Round ends stay smooth on large brushes, and brushes go up to size 200 (the Liner stays at 80)."
+   ],
+   [
+    "Gradients",
+    "Every colour stop has its own opacity, and the Gradient Liner's Along the Line uses the full gradient editor."
+   ],
+   [
+    "Lattice Beside the Drawing",
+    "The diamond in the top bar opens Lattice as a panel docked beside your drawing."
+   ]
+  ],
+  "fixed": [
+   [
+    "Hold to Undo",
+    "Holding two fingers no longer starts undoing while you pinch or move the canvas."
+   ],
+   [
+    "Shape Builder Keeps Round Ends",
+    "Unite, Divide, Minus Front, Convert to Shapes and Simplify no longer turn round line ends into points."
+   ],
+   [
+    "Scan the Body",
+    "You can no longer get stuck on Who Is This Scan For?"
+   ],
+   [
+    "Gradient Liner Ends",
+    "Both ends of a Gradient Liner line are round, see-through colours too."
+   ]
+  ]
+ },
+ {
+  "title": "Each Drawing Keeps Its Pattern, Ovals to Circles, Clients",
+  "builds": "Build 155",
+  "date": "23 November 2026",
+  "summary": "Every drawing remembers its own pattern, a held oval turns into a circle with one finger, the Gradient Liner shows its colours as you draw, and Clients keeps projects and body scans together.",
+  "new": [
+   [
+    "Ovals Into Circles",
+    "Snap an oval and keep holding: touch the screen with a finger to make it a perfect circle, lift the finger for the oval again."
+   ],
+   [
+    "Constructions as a Ruler",
+    "Use a construction's lines as a ruler: your line follows the nearest one."
+   ],
+   [
+    "Clients (Experimental)",
+    "A locked list of clients and their projects in the 3D Body Preview, with each project's scans, designs, sessions, checklist and estimate. Everything stays on this iPad."
+   ]
+  ],
+  "improved": [
+   [
+    "Each Drawing Keeps Its Pattern",
+    "A drawing reopens with the pattern you left it with, and a new drawing starts fresh with nothing selected."
+   ],
+   [
+    "Gradient Liner",
+    "Across the Page shows its colours while you draw; the line stays even like the Liner; Colour Runs have icons."
+   ],
+   [
+    "Vector Liner Edits",
+    "Editing a Vector Liner line with the Curve Pen keeps its pressure and taper."
+   ]
+  ],
+  "fixed": [
+   [
+    "Selections Stay Put",
+    "A lasso selection no longer follows you into another drawing."
+   ]
+  ]
+ },
+ {
   "title": "Dock Anything, Take a Photo, Smoother Bars",
   "builds": "Build 154",
   "date": "22 November 2026",
